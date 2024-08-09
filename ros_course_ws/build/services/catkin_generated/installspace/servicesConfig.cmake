@@ -67,14 +67,14 @@ set(services_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(services_SOURCE_PREFIX /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/services)
-  set(services_DEVEL_PREFIX /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel)
+  set(services_SOURCE_PREFIX /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/services)
+  set(services_DEVEL_PREFIX /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel)
   set(services_INSTALL_PREFIX "")
   set(services_PREFIX ${services_DEVEL_PREFIX})
 else()
   set(services_SOURCE_PREFIX "")
   set(services_DEVEL_PREFIX "")
-  set(services_INSTALL_PREFIX /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/install)
+  set(services_INSTALL_PREFIX /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/install)
   set(services_PREFIX ${services_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/install/lib;/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/install/lib;/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

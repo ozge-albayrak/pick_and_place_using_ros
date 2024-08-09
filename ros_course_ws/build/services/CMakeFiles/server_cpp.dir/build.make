@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src
+CMAKE_SOURCE_DIR = /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build
+CMAKE_BINARY_DIR = /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build
 
 # Include any dependencies generated for this target.
 include services/CMakeFiles/server_cpp.dir/depend.make
@@ -58,17 +58,17 @@ include services/CMakeFiles/server_cpp.dir/progress.make
 include services/CMakeFiles/server_cpp.dir/flags.make
 
 services/CMakeFiles/server_cpp.dir/src/server_cpp.cpp.o: services/CMakeFiles/server_cpp.dir/flags.make
-services/CMakeFiles/server_cpp.dir/src/server_cpp.cpp.o: /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/services/src/server_cpp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object services/CMakeFiles/server_cpp.dir/src/server_cpp.cpp.o"
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/services && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/server_cpp.cpp.o -c /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/services/src/server_cpp.cpp
+services/CMakeFiles/server_cpp.dir/src/server_cpp.cpp.o: /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/services/src/server_cpp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object services/CMakeFiles/server_cpp.dir/src/server_cpp.cpp.o"
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/services && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_cpp.dir/src/server_cpp.cpp.o -c /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/services/src/server_cpp.cpp
 
 services/CMakeFiles/server_cpp.dir/src/server_cpp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_cpp.dir/src/server_cpp.cpp.i"
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/services && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/services/src/server_cpp.cpp > CMakeFiles/server_cpp.dir/src/server_cpp.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/services && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/services/src/server_cpp.cpp > CMakeFiles/server_cpp.dir/src/server_cpp.cpp.i
 
 services/CMakeFiles/server_cpp.dir/src/server_cpp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_cpp.dir/src/server_cpp.cpp.s"
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/services && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/services/src/server_cpp.cpp -o CMakeFiles/server_cpp.dir/src/server_cpp.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/services && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/services/src/server_cpp.cpp -o CMakeFiles/server_cpp.dir/src/server_cpp.cpp.s
 
 # Object files for target server_cpp
 server_cpp_OBJECTS = \
@@ -77,39 +77,39 @@ server_cpp_OBJECTS = \
 # External object files for target server_cpp
 server_cpp_EXTERNAL_OBJECTS =
 
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: services/CMakeFiles/server_cpp.dir/src/server_cpp.cpp.o
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: services/CMakeFiles/server_cpp.dir/build.make
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/libroscpp.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libpthread.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/librosconsole.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/libxmlrpcpp.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/libroscpp_serialization.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/librostime.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/libcpp_common.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp: services/CMakeFiles/server_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp"
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/services && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_cpp.dir/link.txt --verbose=$(VERBOSE)
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: services/CMakeFiles/server_cpp.dir/src/server_cpp.cpp.o
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: services/CMakeFiles/server_cpp.dir/build.make
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/libroscpp.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libpthread.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/librosconsole.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/libxmlrpcpp.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/libroscpp_serialization.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/librostime.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /opt/ros/noetic/lib/libcpp_common.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp: services/CMakeFiles/server_cpp.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp"
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/services && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-services/CMakeFiles/server_cpp.dir/build: /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/server_cpp
+services/CMakeFiles/server_cpp.dir/build: /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/server_cpp
 
 .PHONY : services/CMakeFiles/server_cpp.dir/build
 
 services/CMakeFiles/server_cpp.dir/clean:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/services && $(CMAKE_COMMAND) -P CMakeFiles/server_cpp.dir/cmake_clean.cmake
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/services && $(CMAKE_COMMAND) -P CMakeFiles/server_cpp.dir/cmake_clean.cmake
 .PHONY : services/CMakeFiles/server_cpp.dir/clean
 
 services/CMakeFiles/server_cpp.dir/depend:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/services /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/services /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/services/CMakeFiles/server_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/services /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/services /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/services/CMakeFiles/server_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : services/CMakeFiles/server_cpp.dir/depend
 

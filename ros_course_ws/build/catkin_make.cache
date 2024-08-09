@@ -1,2 +1,2 @@
-node_tutorial:services
--DCATKIN_DEVEL_PREFIX=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/install -G Unix Makefiles
+node_tutorial:rumba_bringup:rumba_msg:rumba_pathway:services
+-DCATKIN_DEVEL_PREFIX=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/install -G Unix Makefiles

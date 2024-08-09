@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/services/src/server_cpp.cpp
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/services/src/server_cpp.cpp
 ros/ros.h
 -
 rospy_tutorials/AddTwoInts.h

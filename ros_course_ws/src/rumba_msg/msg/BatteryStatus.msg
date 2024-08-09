@@ -1,0 +1,6 @@
+int64 percentage_battery
+float64 location_x
+float64 location_y
+float64 orientation_theta
+bool brushes_up
+string debug_message

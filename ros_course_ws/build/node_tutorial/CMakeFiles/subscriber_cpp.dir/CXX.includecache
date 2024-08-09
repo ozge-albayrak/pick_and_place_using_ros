@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/node_tutorial/src/subscriber_cpp.cpp
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/node_tutorial/src/subscriber_cpp.cpp
 ros/ros.h
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/node_tutorial/src/ros/ros.h
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/node_tutorial/src/ros/ros.h
 std_msgs/String.h
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/node_tutorial/src/std_msgs/String.h
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/node_tutorial/src/std_msgs/String.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

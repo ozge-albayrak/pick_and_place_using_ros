@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/node_tutorial/subscriber_cpp"
-  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/node_tutorial/subscriber_cpp.pdb"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/node_tutorial/subscriber_cpp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/node_tutorial/subscriber_cpp.pdb"
   "CMakeFiles/subscriber_cpp.dir/src/subscriber_cpp.cpp.o"
 )
 

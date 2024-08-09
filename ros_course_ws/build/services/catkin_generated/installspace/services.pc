@@ -1,4 +1,4 @@
-prefix=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/install
+prefix=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/install
 
 Name: services
 Description: Description of services

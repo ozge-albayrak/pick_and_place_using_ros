@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/client_cpp"
-  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/services/client_cpp.pdb"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/client_cpp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/services/client_cpp.pdb"
   "CMakeFiles/client_cpp.dir/src/client_cpp.cpp.o"
 )
 

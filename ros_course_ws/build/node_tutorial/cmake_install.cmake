@@ -1,8 +1,8 @@
-# Install script for directory: /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/node_tutorial
+# Install script for directory: /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/node_tutorial
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/node_tutorial/catkin_generated/installspace/node_tutorial.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/node_tutorial/catkin_generated/installspace/node_tutorial.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/node_tutorial/cmake" TYPE FILE FILES
-    "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/node_tutorial/catkin_generated/installspace/node_tutorialConfig.cmake"
-    "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/node_tutorial/catkin_generated/installspace/node_tutorialConfig-version.cmake"
+    "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/node_tutorial/catkin_generated/installspace/node_tutorialConfig.cmake"
+    "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/node_tutorial/catkin_generated/installspace/node_tutorialConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/node_tutorial" TYPE FILE FILES "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/node_tutorial/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/node_tutorial" TYPE FILE FILES "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/node_tutorial/package.xml")
 endif()
 

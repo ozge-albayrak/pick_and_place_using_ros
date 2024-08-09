@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build'
+export PWD='/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build'

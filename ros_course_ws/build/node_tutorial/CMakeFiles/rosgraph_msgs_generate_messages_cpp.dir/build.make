@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src
+CMAKE_SOURCE_DIR = /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build
+CMAKE_BINARY_DIR = /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ node_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build: rosgraph
 .PHONY : node_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 
 node_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/node_tutorial && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/node_tutorial && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : node_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 node_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/src/node_tutorial /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/node_tutorial /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/build/node_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/src/node_tutorial /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/node_tutorial /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/build/node_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : node_tutorial/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
 

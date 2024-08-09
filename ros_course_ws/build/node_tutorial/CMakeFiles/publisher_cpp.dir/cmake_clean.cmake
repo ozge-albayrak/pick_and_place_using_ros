@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/node_tutorial/publisher_cpp"
-  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course_ws/devel/lib/node_tutorial/publisher_cpp.pdb"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/node_tutorial/publisher_cpp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/ros_course_ws/devel/lib/node_tutorial/publisher_cpp.pdb"
   "CMakeFiles/publisher_cpp.dir/src/publisher_cpp.cpp.o"
 )
 

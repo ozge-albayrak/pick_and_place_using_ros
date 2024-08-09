@@ -1,0 +1,11 @@
+<launch>
+
+    <param name = "/threshold_parameter" type = "double" value = "0.05" />
+    
+    <node name = "turtlesim" pkg = "turtlesim" type = "turtlesim_node" />
+
+    <node name = "control_rumba_robot" pkg = "rumba_pathway" type = "rumba_controller" />
+    
+    <node name = "service_go_to_position" pkg = "rumba_pathway" type = "go_to_position_server" />
+       
+</launch>

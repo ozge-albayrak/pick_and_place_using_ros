@@ -1,0 +1,10 @@
+(cl:defpackage rumba_msg-srv
+  (:use )
+  (:export
+   "TARGETPOSITION"
+   "<TARGETPOSITION-REQUEST>"
+   "TARGETPOSITION-REQUEST"
+   "<TARGETPOSITION-RESPONSE>"
+   "TARGETPOSITION-RESPONSE"
+  ))
+
