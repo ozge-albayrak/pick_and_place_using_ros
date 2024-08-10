@@ -1,0 +1,2 @@
+industrial_env
+-DCATKIN_DEVEL_PREFIX=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/install -G Unix Makefiles

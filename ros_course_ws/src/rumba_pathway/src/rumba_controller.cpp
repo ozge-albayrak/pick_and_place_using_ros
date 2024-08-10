@@ -65,23 +65,25 @@ public:
         if (client_target_pose.call(target_position))
         {
             // Print the response of the service 
-            ROS_INFO("Service is called.");
-            std::cout<< target_position.response.message << std::endl;
+            //ROS_INFO("Service is called.");
+            //std::cout<< target_position.response.message << std::endl;
 
             // Set the threshold
-            // float threshold = 0.05;
-            float threshold;
+            float threshold = 0.05;
+            //float threshold;
             // use the fuction getParam(), name of the parameter "/threshold_parameter", associated with parameter called "threshold"
-            n_.getParam("/threshold_parameter", threshold);
+            //n_.getParam("threshold_parameter", threshold);
 
 
             // Calculate the difference value between the current theta angle and angle theta value that the server has calculated
             float diff = current_pose.theta - target_position.response.angular_z;
             // Calculate the difference between current theta angle and target angle 
             float diff_theta = current_pose.theta - target_position.request.target_theta;
-            std::cout << " diff theta = " << diff << std::endl;
+            //std::cout << " diff theta = " << diff << std::endl;
             // Create an object to calculate the distance between the current position and the target position in x and y direction
             double distance = getDistance();
+
+            //std::cout << (std::abs(diff) < threshold) << " Diff: " << diff << " Thresh: " << threshold <<  " DT: " << diff_theta << std::endl;
 
             // Rotate until the turtle is reached the target theta value
             if (std::abs(diff) > threshold)
@@ -89,7 +91,7 @@ public:
                 //Spin at the angular speed of 1 counter clockwise
                 cmd.linear.x = 0.0;
                 cmd.angular.z = 1.0;
-
+                std::cout << "A: "<< (std::abs(diff_theta) < threshold) << " B: " << (distance < threshold) << " D: " << distance << std::endl;
                 // need a condition for stopping the turtle when reaching the target theta
                 if (std::abs(diff_theta) < threshold and distance < threshold)
                 {
@@ -109,7 +111,7 @@ public:
         }
 
 
-        if (current_pose.x > 10.0)
+        else if (current_pose.x > 10.0)
         {
             // Ask the robot to turn left
             cmd.linear.x = 0.8;
@@ -150,6 +152,8 @@ private:
     ros::Subscriber sub_pose_;
     // Create Geometry message Pose object 
     geometry_msgs::Pose2D current_pose;
+    // Turlesim pose message
+    turtlesim::Pose pose;
     // Create Geometry message Twist object
     geometry_msgs::Twist cmd;
     // Create a client that asks to teleport the turtle to certain position
