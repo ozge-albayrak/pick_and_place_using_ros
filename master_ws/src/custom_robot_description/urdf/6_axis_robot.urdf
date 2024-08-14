@@ -1,0 +1,255 @@
+<?xml version = "1.0"?>
+
+<robot name="custom_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find custom_robot_description)/urdf/link_joint.xacro"/>
+    <xacro:include filename="$(find custom_robot_description)/urdf/custom_gripper.xacro"/>
+    
+    
+    <!-- Create Base Link using xacro -->
+    <xacro:cobot_link_cylinder name="base_link" origin_xyz="0.0 0.0 0.02" origin_rpy="0.0 0.0 0.0" 
+                            radius="0.05" length="0.04" />
+
+    <!-- Create Link 1 using xacro-->
+    <xacro:cobot_link_cylinder name="link_1" origin_xyz="0.0 0.0 0.045" origin_rpy="0.0 0.0 0.0" 
+                            radius="0.035" length="0.09" />
+
+    <!-- Create the joint that connects Base Link and Link 1 using xacro-->
+    <xacro:cobot_joint name="base_link__link_1" type="revolute" parent="base_link" child="link_1"
+                            axis="0 0 1" limit_l="-3.14159" limit_u="3.14159" limit_v="0.5" limit_e="1000.0"
+                            origin_xyz="0 0 0.04" origin_rpy="0 0 0" />
+
+    <!-- Create Link 2 using xacro-->
+    <xacro:cobot_link_cylinder name="link_2" origin_xyz="0.0 0.0 0.2125" origin_rpy="0.0 0.0 0.0" 
+                            radius="0.035" length="0.425" />
+
+    <!-- Create the joint that connects Link 1 and Link 2 using xacro-->
+    <xacro:cobot_joint name="link_1__link_2" type="revolute" parent="link_1" child="link_2"
+                            axis="0 1 0" limit_l="-3.14159" limit_u="3.14159" limit_v="0.5" limit_e="1000.0"
+                            origin_xyz="0 0.07 0.055" origin_rpy="0 0 0" />
+    
+    <!-- Create Link 3 using xacro-->
+    <xacro:cobot_link_cylinder name="link_3" origin_xyz="0.0 0.0 0.196" origin_rpy="0.0 0.0 0.0" 
+                            radius="0.035" length="0.392" />
+
+    <!-- Create the joint that connects Link 2 and Link 3 using xacro-->
+    <xacro:cobot_joint name="link_2__link_3" type="revolute" parent="link_2" child="link_3"
+                            axis="0 1 0" limit_l="-3.14159" limit_u="3.14159" limit_v="0.5" limit_e="1000.0"
+                            origin_xyz="0 -0.0675 0.39" origin_rpy="0 0 0" />
+   
+    <!-- Create Link 4 using xacro-->
+    <xacro:cobot_link_cylinder name="link_4" origin_xyz="0.0 0.0 0.047" origin_rpy="0.0 0.0 0.0" 
+                            radius="0.035" length="0.094" />
+
+    <!-- Create the joint that connects Link 3 and Link 4 using xacro-->
+    <xacro:cobot_joint name="link_3__link_4" type="revolute" parent="link_3" child="link_4"
+                            axis="0 1 0" limit_l="-3.14159" limit_u="3.14159" limit_v="0.5" limit_e="1000.0"
+                            origin_xyz="0 0.065 0.357" origin_rpy="0 0 0" />
+
+    <!-- Create Link 5 using xacro-->
+    <xacro:cobot_link_cylinder name="link_5" origin_xyz="0.0 0.0 0.009" origin_rpy="0.0 0.0 0.0" 
+                            radius="0.0325" length="0.083" />
+
+    <!-- Create the joint that connects Link 4 and Link 5 using xacro-->
+    <xacro:cobot_joint name="link_4__link_5" type="revolute" parent="link_4" child="link_5"
+                            axis="0 1 0" limit_l="-3.14159" limit_u="3.14159" limit_v="0.5" limit_e="1000.0"
+                            origin_xyz="0 0 0.1265" origin_rpy="1.57 0 0" />
+
+    <!-- Create Link 6 using xacro-->
+    <xacro:cobot_link_cylinder name="link_6" origin_xyz="0.0 0.0 0.01" origin_rpy="0.0 0.0 0.0" 
+                            radius="0.0325" length="0.02" />
+
+    <!-- Create the joint that connects Link 5 and Link 6 using xacro-->
+    <xacro:cobot_joint name="link_5__link_6" type="revolute" parent="link_5" child="link_6"
+                            axis="0 0 1" limit_l="-3.14159" limit_u="3.14159" limit_v="0.5" limit_e="1000.0"
+                            origin_xyz="0 0 0.0505" origin_rpy="0 0 0" />
+    
+    <!-- 
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.02" rpy="0.0 0.0 0.0"/>    
+        </visual>
+
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.02" rpy="0.0 0.0 0.0"/> 
+        </collision>  
+    </link>   
+    -->
+
+    <!--
+    <link name="link_1">
+        <visual>
+            <geometry>
+                <cylinder radius="0.035" length="0.09"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.045" rpy="0.0 0.0 0.0"/>    
+        </visual>
+
+        <collision>
+            <geometry>
+                <cylinder radius="0.035" length="0.09"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.045" rpy="0.0 0.0 0.0"/> 
+        </collision>  
+    </link>
+    
+    <joint name="base_link__link_1" type="revolute">
+        <parent link="base_link"/>
+        <child link="link_1"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14159" upper="3.14159" velocity="0.5" effort="1000.0"/>
+        <origin xyz="0 0 0.04" rpy="0 0 0"/>
+    </joint>
+    -->
+
+    <!--
+    <link name="link_2">
+        <visual>
+            <geometry>
+                <cylinder radius="0.035" length="0.425"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.2125" rpy="0.0 0.0 0.0"/>    
+        </visual>
+
+        <collision>
+            <geometry>
+                <cylinder radius="0.035" length="0.425"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.2125" rpy="0.0 0.0 0.0"/> 
+        </collision>  
+    </link>
+
+    <joint name="link_1__link_2" type="revolute">
+        <parent link="link_1"/>
+        <child link="link_2"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.14159" upper="3.14159" velocity="0.05" effort="1000.0"/>
+        <origin xyz="0 0.07 0.055" rpy="0 0 0"/>
+    </joint>
+    -->
+
+    <!--
+    <link name="link_3">
+        <visual>
+            <geometry>
+                <cylinder radius="0.0325" length="0.392"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.196" rpy="0.0 0.0 0.0"/>    
+        </visual>
+
+        <collision>
+            <geometry>
+                <cylinder radius="0.0325" length="0.392"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.196" rpy="0.0 0.0 0.0"/> 
+        </collision>  
+    </link>
+
+    <joint name="link_2__link_3" type="revolute">
+        <parent link="link_2"/>
+        <child link="link_3"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.14159" upper="3.14159" velocity="0.5" effort="1000.0"/>
+        <origin xyz="0 -0.0675 0.39" rpy="0 0 0"/>
+    </joint>
+     -->
+
+    <!-- 
+    <link name="link_4">
+        <visual>
+            <geometry>
+                <cylinder radius="0.0325" length="0.094"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.047" rpy="0.0 0.0 0.0"/>    
+        </visual>
+
+        <collision>
+            <geometry>
+                <cylinder radius="0.0325" length="0.094"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.047" rpy="0.0 0.0 0.0"/> 
+        </collision>  
+    </link>
+
+    <joint name="link_3__link_4" type="revolute">
+        <parent link="link_3"/>
+        <child link="link_4"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.14159" upper="3.14159" velocity="0.5" effort="1000.0"/>
+        <origin xyz="0 0.065 0.357" rpy="0 0 0"/>
+    </joint>
+    -->
+
+    <!-- Create Link 5 
+    <link name="link_5">
+        <visual>
+            <geometry>
+                <cylinder radius="0.0325" length="0.083"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.009" rpy="0.0 0.0 0.0"/>    
+        </visual>
+
+        <collision>
+            <geometry>
+                <cylinder radius="0.0325" length="0.083"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.009" rpy="0.0 0.0 0.0"/> 
+        </collision>  
+    </link>
+
+    <joint name="link_4__link_5" type="revolute">
+        <parent link="link_4"/>
+        <child link="link_5"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-3.14159" upper="3.14159" velocity="0.5" effort="1000.0"/>
+        <origin xyz="0 0 0.1265" rpy="1.57 0 0"/>
+    </joint>
+    -->
+
+    <!-- Create Link 6 
+    <link name="link_6">
+        <visual>
+            <geometry>
+                <cylinder radius="0.0325" length="0.02"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.01" rpy="0.0 0.0 0.0"/>    
+        </visual>
+
+        <collision>
+            <geometry>
+                <cylinder radius="0.0325" length="0.02"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.01" rpy="0.0 0.0 0.0"/> 
+        </collision>  
+    </link>
+
+    <joint name="link_5__link_6" type="revolute">
+        <parent link="link_5"/>
+        <child link="link_6"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14159" upper="3.14159" velocity="0.5" effort="1000.0"/>
+        <origin xyz="0 0 0.0505" rpy="0 0 0"/>
+    </joint>
+    -->
+
+    <!-- Attach End Effector -->
+    <link name="tool_0">
+    </link>
+
+    <joint name="link_6__tool_0" type="fixed">
+        <parent link="link_6"/>
+        <child link="tool_0"/>
+        <origin xyz="0.0 0.0 0.02" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+    <xacro:custom_gripper parent="tool_0" origin_xyz="0.0 0.0 0.0"/>
+    
+    
+    
+</robot>

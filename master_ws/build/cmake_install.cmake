@@ -131,7 +131,9 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/gtest/cmake_install.cmake")
+  include("/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/custom_robot_description/cmake_install.cmake")
   include("/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/industrial_env/cmake_install.cmake")
+  include("/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/meshes_robot_description/cmake_install.cmake")
 
 endif()
 

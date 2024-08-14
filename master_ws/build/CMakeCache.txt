@@ -377,6 +377,12 @@ class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
 //Value Computed by CMake
+custom_robot_description_BINARY_DIR:STATIC=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/custom_robot_description
+
+//Value Computed by CMake
+custom_robot_description_SOURCE_DIR:STATIC=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/src/custom_robot_description
+
+//Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/gtest/googlemock
 
 //Dependencies for the target
@@ -430,6 +436,12 @@ industrial_env_SOURCE_DIR:STATIC=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_cou
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/librosconsole_bridge.so
+
+//Value Computed by CMake
+meshes_robot_description_BINARY_DIR:STATIC=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/meshes_robot_description
+
+//Value Computed by CMake
+meshes_robot_description_SOURCE_DIR:STATIC=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/src/meshes_robot_description
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
@@ -624,7 +636,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
