@@ -1,0 +1,8 @@
+prefix=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/install
+
+Name: ur5_description
+Description: Description of ur5_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -8,8 +8,8 @@
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
     <!-- Visualize in Rviz by loading config file -->
-    <node name="rviz" pkg="rviz" type="rviz"/>
-   <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find meshes_robot_description)/config/config.rviz"/>-->
+    <!-- <node name="rviz" pkg="rviz" type="rviz"/> -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find meshes_robot_description)/config/config.rviz"/>
 
     <!-- Visualization of the use_gui for playing with the joint -->
     <arg name="use_gui" default="true" />
