@@ -7,7 +7,7 @@
     <xacro:macro name="custom_gripper" params="parent origin_xyz">
 
         <xacro:cobot_link_cylinder name="gripper_connector" origin_xyz="0.0 0.0 0.015" origin_rpy="0.0 0.0 0.0"
-                                    radius="0.04" length="0.03" />
+                                    radius="0.04" length="0.03" mass="0.5" i_xx="0.0002375" i_xy="0" i_xz="0" i_yy="0.0002375" i_yz="0" i_zz="0.00006666666667"/>
         
         <joint name="{parent}_gripper_connector" type="fixed">
             <parent link="${parent}"/>
@@ -17,7 +17,7 @@
         
 
         <xacro:cobot_link_box name="finger_support" origin_xyz="0.0 0.005 0.005" origin_rpy="0.0 0.0 0.0"
-                                    size="0.120 0.01 0.01"/>
+                                    size="0.120 0.01 0.01" mass="0.25" i_xx="0.0003" i_xy="0" i_xz="0" i_yy="0" i_yz="0" i_zz="0.0003"/>
         
         <joint name="finger_support_gripper_connector" type="fixed">
             <parent link="gripper_connector"/>
@@ -27,10 +27,10 @@
 
 
         <xacro:cobot_link_box name="finger_right" origin_xyz="0.0 0.0 0.04" origin_rpy="0.0 0.0 0.0"
-                                    size="0.01 0.01 0.08"/>
+                                    size="0.01 0.01 0.08" mass="0.2" i_xx="0.00042667" i_xy="0" i_xz="0" i_yy="0" i_yz="0" i_zz="0.00042667"/>
 
         <xacro:cobot_link_box name="finger_left" origin_xyz="0.0 0.0 0.04" origin_rpy="0.0 0.0 0.0"
-                                    size="0.01 0.01 0.08"/>
+                                    size="0.01 0.01 0.08" mass="0.2" i_xx="0.00042667" i_xy="0" i_xz="0" i_yy="0" i_yz="0" i_zz="0.00042667"/>
         
         <joint name="finger_right_joint" type="prismatic">
             <parent link="finger_support"/>
@@ -51,6 +51,13 @@
             <mimic joint="finger_right_joint" multiplier="-1.0" offset="0" />
         </joint>
         
+        <xacro:transmission name="trans_finger_right_joint" 
+                        joint_name="finger_right_joint"
+                        actuator_name = "motor_finger_right_joint"/>
+
+        <xacro:transmission name="trans_finger_left_joint" 
+                        joint_name="finger_left_joint"
+                        actuator_name = "motor_finger_left_joint"/>
 
     </xacro:macro>
     
