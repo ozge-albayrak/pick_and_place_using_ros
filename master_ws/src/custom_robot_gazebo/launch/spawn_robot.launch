@@ -7,11 +7,11 @@
     <!-- Set the position in empty world -->
     <arg name="x" default="0" />
     <arg name="y" default="0" />
-    <arg name="z" default="0" />
+    <arg name="z" default="0.8" />
 
 
     <!-- Put world file as argumemt -->
-    <!-- <arg name="world_file" default ="$(find industrial_env)/worlds/pick_and_place_workplace.world" /> -->
+    <arg name="world_file" default ="$(find industrial_env)/worlds/pick_and_place_workplace.world" />
 
     <!-- Launch Gazebo world in paused -->
     <include file = "$(find gazebo_ros)/launch/empty_world.launch" >
@@ -19,7 +19,7 @@
         <arg name ="debug" value="false" />
         <arg name ="gui" value="true" />
         <arg name ="paused" value="true" />
-        <!-- <arg name ="world_name" value="$(arg world_file)" /> -->
+        <arg name ="world_name" value="$(arg world_file)" />
     </include>
 
     <!-- Spawn the robot using the package gazebo_ros -->
@@ -34,6 +34,11 @@
             args="joint_state_controller
                 joint1_position_controller
                 joint2_position_controller
+                joint3_position_controller
+                joint4_position_controller
+                joint5_position_controller
+                joint6_position_controller
+                gripper_controller_right
                 --timeout 60 " >
     </node>
 

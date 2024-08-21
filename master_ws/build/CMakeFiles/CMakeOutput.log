@@ -489,3 +489,33 @@ make[1]: Leaving directory '/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/m
 
 
 
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
+Change Dir: /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e74b5/fast && /usr/bin/make -f CMakeFiles/cmTC_e74b5.dir/build.make CMakeFiles/cmTC_e74b5.dir/build
+make[1]: Entering directory '/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e74b5.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_e74b5.dir/src.cxx.o -c /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e74b5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e74b5.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_SUPPORTS_CXX11    CMakeFiles/cmTC_e74b5.dir/src.cxx.o  -o cmTC_e74b5 
+make[1]: Leaving directory '/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX0X succeeded with the following output:
+Change Dir: /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1c563/fast && /usr/bin/make -f CMakeFiles/cmTC_1c563.dir/build.make CMakeFiles/cmTC_1c563.dir/build
+make[1]: Entering directory '/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1c563.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX0X   -std=c++0x -o CMakeFiles/cmTC_1c563.dir/src.cxx.o -c /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_1c563
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c563.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_SUPPORTS_CXX0X    CMakeFiles/cmTC_1c563.dir/src.cxx.o  -o cmTC_1c563 
+make[1]: Leaving directory '/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }

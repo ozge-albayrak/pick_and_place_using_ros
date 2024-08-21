@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/ApplyBodyWrench.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/ApplyJointEffort.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/BodyRequest.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/ContactState.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/ContactsState.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/DeleteLight.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/DeleteModel.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/GetJointProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/GetLightProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/GetLinkProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/GetLinkState.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/GetModelProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/GetModelState.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/GetPhysicsProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/GetWorldProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/JointRequest.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/LinkState.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/LinkStates.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/ModelState.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/ModelStates.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/ODEJointProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/ODEPhysics.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/PerformanceMetrics.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/SensorPerformanceMetric.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/SetJointProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/SetJointTrajectory.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/SetLightProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/SetLinkProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/SetLinkState.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/SetModelConfiguration.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/SetModelState.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/SetPhysicsProperties.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/SpawnModel.h"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/include/gazebo_msgs/WorldState.h"
+  "CMakeFiles/gazebo_msgs_generate_messages_cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

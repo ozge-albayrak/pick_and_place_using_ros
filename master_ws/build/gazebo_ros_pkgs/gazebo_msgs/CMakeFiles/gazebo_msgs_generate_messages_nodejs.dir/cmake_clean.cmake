@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ContactState.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ContactsState.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/LinkState.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/LinkStates.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ModelState.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ModelStates.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ODEJointProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/ODEPhysics.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/PerformanceMetrics.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/SensorPerformanceMetric.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/msg/WorldState.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/ApplyBodyWrench.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/ApplyJointEffort.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/BodyRequest.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/DeleteLight.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/DeleteModel.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetJointProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetLightProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetLinkProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetLinkState.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetModelProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetModelState.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetPhysicsProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/GetWorldProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/JointRequest.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetJointProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetJointTrajectory.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetLightProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetLinkProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetLinkState.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetModelConfiguration.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetModelState.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetPhysicsProperties.js"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SpawnModel.js"
+  "CMakeFiles/gazebo_msgs_generate_messages_nodejs"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

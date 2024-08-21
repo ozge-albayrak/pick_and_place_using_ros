@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/ContactState.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/ContactsState.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/LinkState.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/LinkStates.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/ModelState.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/ModelStates.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/ODEJointProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/ODEPhysics.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/PerformanceMetrics.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/SensorPerformanceMetric.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/msg/WorldState.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/ApplyBodyWrench.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/ApplyJointEffort.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/BodyRequest.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/DeleteLight.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/DeleteModel.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/GetJointProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/GetLightProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/GetLinkProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/GetLinkState.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/GetModelProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/GetModelState.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/GetPhysicsProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/GetWorldProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/JointRequest.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SetJointProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SetJointTrajectory.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SetLightProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SetLinkProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SetLinkState.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SetModelConfiguration.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SetModelState.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SetPhysicsProperties.lisp"
+  "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SpawnModel.lisp"
+  "CMakeFiles/gazebo_msgs_generate_messages_lisp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,2 @@
+set(object_msgs_MESSAGE_FILES "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/src/general-message-pkgs/object_msgs/msg/Object.msg;/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/src/general-message-pkgs/object_msgs/msg/ObjectPose.msg")
+set(object_msgs_SERVICE_FILES "/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/src/general-message-pkgs/object_msgs/srv/ObjectInfo.srv;/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/src/general-message-pkgs/object_msgs/srv/RegisterObject.srv")

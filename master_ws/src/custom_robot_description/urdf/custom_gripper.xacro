@@ -27,12 +27,45 @@
 
 
         <xacro:cobot_link_box name="finger_right" origin_xyz="0.0 0.0 0.04" origin_rpy="0.0 0.0 0.0"
-                                    size="0.01 0.01 0.08" mass="0.2" i_xx="0.00042667" i_xy="0" i_xz="0" i_yy="0" i_yz="0" i_zz="0.00042667"/>
+                                    size="0.01 0.01 0.08" mass="0.2" i_xx="0.00042667" i_xy="0" i_xz="0" 
+                                    i_yy="0.00042667" i_yz="0" i_zz="0.0000083"/>
 
         <xacro:cobot_link_box name="finger_left" origin_xyz="0.0 0.0 0.04" origin_rpy="0.0 0.0 0.0"
-                                    size="0.01 0.01 0.08" mass="0.2" i_xx="0.00042667" i_xy="0" i_xz="0" i_yy="0" i_yz="0" i_zz="0.00042667"/>
-        
+                                    size="0.01 0.01 0.08" mass="0.2" i_xx="0.00042667" i_xy="0" i_xz="0" 
+                                    i_yy="0.00042667" i_yz="0" i_zz="0.0000083"/>
+
         <joint name="finger_right_joint" type="prismatic">
+            <parent link="finger_support"/>
+            <child link="finger_right"/>
+            <axis xyz="1 0 0"/>
+            <limit lower="0" upper="0.044" velocity="0.5" effort="200"/>
+            <origin xyz="-0.05 0.0 0.011" rpy="0 0 0"/>
+            <dynamics damping="1" friction="2"/>
+        </joint>
+
+        <xacro:transmission name="trans_finger_right_joint" 
+                        joint_name="finger_right_joint" 
+                        actuator_name="motor_finger_right_joint" />
+        
+        <joint name="finger_left_joint" type="prismatic">
+            <parent link="finger_support"/>
+            <child link="finger_left"/>
+            <axis xyz="1 0 0"/>
+            <limit lower="-0.044" upper="0" velocity="0.5" effort="200"/>
+            <origin xyz="0.05 0.0 0.011" rpy="0 0 0"/>
+            <dynamics damping="1" friction="2"/>
+            <mimic joint="finger_right_joint" multiplier="-1.0" offset="0" /> 
+        </joint>
+
+        <xacro:transmission name="trans_finger_left_joint" 
+                        joint_name="finger_left_joint" 
+                        actuator_name="motor_finger_left_joint" />
+
+        
+        <xacro:mimic_joint_plugin_gazebo  parent_joint="finger_right_joint" mimic_joint="finger_left_joint" 
+                                            has_pid="false" multiplier="-1.0" max_effort="200" />
+        
+        <!-- <joint name="finger_right_joint" type="prismatic">
             <parent link="finger_support"/>
             <child link="finger_right"/>
             <axis xyz="1 0 0"/>
@@ -58,6 +91,10 @@
         <xacro:transmission name="trans_finger_left_joint" 
                         joint_name="finger_left_joint"
                         actuator_name = "motor_finger_left_joint"/>
+
+        <xacro:mimic_joint_plugin_gazebo  parent_joint="finger_right_joint" mimic_joint="finger_left_joint" 
+                                            has_pid="false" multiplier="-1.0" max_effort="200" /> -->
+
 
     </xacro:macro>
     
