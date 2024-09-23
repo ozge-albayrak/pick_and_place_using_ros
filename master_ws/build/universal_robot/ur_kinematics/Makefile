@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -112,17 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -134,6 +111,29 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,139 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
+universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/rule
+.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/rule
 
 # Convenience name for target.
-octomap_msgs_generate_messages_py: universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
+ur20_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/rule
 
-.PHONY : octomap_msgs_generate_messages_py
+.PHONY : ur20_moveit_plugin
 
 # fast build rule for target.
-octomap_msgs_generate_messages_py/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_py.dir/build.make universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_py.dir/build
-.PHONY : octomap_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-octomap_msgs_generate_messages_cpp: universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : octomap_msgs_generate_messages_cpp
-
-# fast build rule for target.
-octomap_msgs_generate_messages_cpp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build.make universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build
-.PHONY : octomap_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-octomap_msgs_generate_messages_eus: universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
-
-.PHONY : octomap_msgs_generate_messages_eus
-
-# fast build rule for target.
-octomap_msgs_generate_messages_eus/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build.make universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build
-.PHONY : octomap_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-moveit_msgs_generate_messages_py: universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
-
-.PHONY : moveit_msgs_generate_messages_py
-
-# fast build rule for target.
-moveit_msgs_generate_messages_py/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_py.dir/build.make universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_py.dir/build
-.PHONY : moveit_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/rule
-
-# Convenience name for target.
-ur3e_kin: universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/rule
-
-.PHONY : ur3e_kin
-
-# fast build rule for target.
-ur3e_kin/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/build
-.PHONY : ur3e_kin/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-moveit_msgs_generate_messages_nodejs: universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : moveit_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-moveit_msgs_generate_messages_nodejs/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build.make universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build
-.PHONY : moveit_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/rule
-
-# Convenience name for target.
-ur3_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/rule
-
-.PHONY : ur3_moveit_plugin
-
-# fast build rule for target.
-ur3_moveit_plugin/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/build
-.PHONY : ur3_moveit_plugin/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-moveit_msgs_generate_messages_lisp: universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : moveit_msgs_generate_messages_lisp
-
-# fast build rule for target.
-moveit_msgs_generate_messages_lisp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build.make universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build
-.PHONY : moveit_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-moveit_msgs_generate_messages_eus: universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
-
-.PHONY : moveit_msgs_generate_messages_eus
-
-# fast build rule for target.
-moveit_msgs_generate_messages_eus/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build.make universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build
-.PHONY : moveit_msgs_generate_messages_eus/fast
+ur20_moveit_plugin/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/build
+.PHONY : ur20_moveit_plugin/fast
 
 # Convenience name for target.
 universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/rule:
@@ -331,96 +211,6 @@ ur3_kin: universal_robot/ur_kinematics/CMakeFiles/ur3_kin.dir/rule
 ur3_kin/fast:
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_kin.dir/build
 .PHONY : ur3_kin/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-octomap_msgs_generate_messages_nodejs: universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : octomap_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-octomap_msgs_generate_messages_nodejs/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build.make universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build
-.PHONY : octomap_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-moveit_msgs_generate_messages_cpp: universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : moveit_msgs_generate_messages_cpp
-
-# fast build rule for target.
-moveit_msgs_generate_messages_cpp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build.make universal_robot/ur_kinematics/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build
-.PHONY : moveit_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/rule
-
-# Convenience name for target.
-ur5_kin: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/rule
-
-.PHONY : ur5_kin
-
-# fast build rule for target.
-ur5_kin/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build
-.PHONY : ur5_kin/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/rule
-
-# Convenience name for target.
-ur5e_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/rule
-
-.PHONY : ur5e_moveit_plugin
-
-# fast build rule for target.
-ur5e_moveit_plugin/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/build
-.PHONY : ur5e_moveit_plugin/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/rule
-
-# Convenience name for target.
-ur20_kin: universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/rule
-
-.PHONY : ur20_kin
-
-# fast build rule for target.
-ur20_kin/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/build
-.PHONY : ur20_kin/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/rule
-
-# Convenience name for target.
-ur10e_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/rule
-
-.PHONY : ur10e_moveit_plugin
-
-# fast build rule for target.
-ur10e_moveit_plugin/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/build
-.PHONY : ur10e_moveit_plugin/fast
 
 # Convenience name for target.
 universal_robot/ur_kinematics/CMakeFiles/ur5e_kin.dir/rule:
@@ -468,34 +258,34 @@ ur10e_kin/fast:
 .PHONY : ur10e_kin/fast
 
 # Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
+universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/rule
+.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/rule
 
 # Convenience name for target.
-octomap_msgs_generate_messages_lisp: universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
+ur20_kin: universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/rule
 
-.PHONY : octomap_msgs_generate_messages_lisp
+.PHONY : ur20_kin
 
 # fast build rule for target.
-octomap_msgs_generate_messages_lisp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build.make universal_robot/ur_kinematics/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build
-.PHONY : octomap_msgs_generate_messages_lisp/fast
+ur20_kin/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/build
+.PHONY : ur20_kin/fast
 
 # Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/moveit_ros_planning_gencfg.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
+universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/rule
+.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/rule
 
 # Convenience name for target.
-moveit_ros_planning_gencfg: universal_robot/ur_kinematics/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
+ur3e_kin: universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/rule
 
-.PHONY : moveit_ros_planning_gencfg
+.PHONY : ur3e_kin
 
 # fast build rule for target.
-moveit_ros_planning_gencfg/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/moveit_ros_planning_gencfg.dir/build.make universal_robot/ur_kinematics/CMakeFiles/moveit_ros_planning_gencfg.dir/build
-.PHONY : moveit_ros_planning_gencfg/fast
+ur3e_kin/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/build
+.PHONY : ur3e_kin/fast
 
 # Convenience name for target.
 universal_robot/ur_kinematics/CMakeFiles/ur16e_kin.dir/rule:
@@ -513,36 +303,6 @@ ur16e_kin/fast:
 .PHONY : ur16e_kin/fast
 
 # Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/rule
-
-# Convenience name for target.
-ur30_kin: universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/rule
-
-.PHONY : ur30_kin
-
-# fast build rule for target.
-ur30_kin/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/build
-.PHONY : ur30_kin/fast
-
-# Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/rule
-
-# Convenience name for target.
-ur5_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/rule
-
-.PHONY : ur5_moveit_plugin
-
-# fast build rule for target.
-ur5_moveit_plugin/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/build
-.PHONY : ur5_moveit_plugin/fast
-
-# Convenience name for target.
 universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/rule:
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/rule
 .PHONY : universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/rule
@@ -558,19 +318,34 @@ ur10_moveit_plugin/fast:
 .PHONY : ur10_moveit_plugin/fast
 
 # Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/rule
+universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/rule
+.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/rule
 
 # Convenience name for target.
-ur3e_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/rule
+ur30_kin: universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/rule
 
-.PHONY : ur3e_moveit_plugin
+.PHONY : ur30_kin
 
 # fast build rule for target.
-ur3e_moveit_plugin/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/build
-.PHONY : ur3e_moveit_plugin/fast
+ur30_kin/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/build
+.PHONY : ur30_kin/fast
+
+# Convenience name for target.
+universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/rule
+.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/rule
+
+# Convenience name for target.
+ur3_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/rule
+
+.PHONY : ur3_moveit_plugin
+
+# fast build rule for target.
+ur3_moveit_plugin/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/build
+.PHONY : ur3_moveit_plugin/fast
 
 # Convenience name for target.
 universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/rule:
@@ -588,19 +363,79 @@ ur30_moveit_plugin/fast:
 .PHONY : ur30_moveit_plugin/fast
 
 # Convenience name for target.
-universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/rule
-.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/rule
+universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/rule
+.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/rule
 
 # Convenience name for target.
-ur20_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/rule
+ur3e_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/rule
 
-.PHONY : ur20_moveit_plugin
+.PHONY : ur3e_moveit_plugin
 
 # fast build rule for target.
-ur20_moveit_plugin/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/build
-.PHONY : ur20_moveit_plugin/fast
+ur3e_moveit_plugin/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/build
+.PHONY : ur3e_moveit_plugin/fast
+
+# Convenience name for target.
+universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/rule
+.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/rule
+
+# Convenience name for target.
+ur5_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/rule
+
+.PHONY : ur5_moveit_plugin
+
+# fast build rule for target.
+ur5_moveit_plugin/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/build
+.PHONY : ur5_moveit_plugin/fast
+
+# Convenience name for target.
+universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/rule
+.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/rule
+
+# Convenience name for target.
+ur10e_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/rule
+
+.PHONY : ur10e_moveit_plugin
+
+# fast build rule for target.
+ur10e_moveit_plugin/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/build
+.PHONY : ur10e_moveit_plugin/fast
+
+# Convenience name for target.
+universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/rule
+.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/rule
+
+# Convenience name for target.
+ur5_kin: universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/rule
+
+.PHONY : ur5_kin
+
+# fast build rule for target.
+ur5_kin/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build
+.PHONY : ur5_kin/fast
+
+# Convenience name for target.
+universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/rule
+.PHONY : universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/rule
+
+# Convenience name for target.
+ur5e_moveit_plugin: universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/rule
+
+.PHONY : ur5e_moveit_plugin
+
+# fast build rule for target.
+ur5e_moveit_plugin/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/build
+.PHONY : ur5e_moveit_plugin/fast
 
 src/ur_kin.o: src/ur_kin.cpp.o
 
@@ -608,15 +443,15 @@ src/ur_kin.o: src/ur_kin.cpp.o
 
 # target to build an object file
 src/ur_kin.cpp.o:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/src/ur_kin.cpp.o
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_kin.dir/src/ur_kin.cpp.o
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/src/ur_kin.cpp.o
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_kin.dir/src/ur_kin.cpp.o
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10_kin.dir/src/ur_kin.cpp.o
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/src/ur_kin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/src/ur_kin.cpp.o
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur16e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur16e_kin.dir/src/ur_kin.cpp.o
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/src/ur_kin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.o
 .PHONY : src/ur_kin.cpp.o
 
 src/ur_kin.i: src/ur_kin.cpp.i
@@ -625,15 +460,15 @@ src/ur_kin.i: src/ur_kin.cpp.i
 
 # target to preprocess a source file
 src/ur_kin.cpp.i:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/src/ur_kin.cpp.i
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_kin.dir/src/ur_kin.cpp.i
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.i
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/src/ur_kin.cpp.i
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_kin.dir/src/ur_kin.cpp.i
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10_kin.dir/src/ur_kin.cpp.i
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/src/ur_kin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/src/ur_kin.cpp.i
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur16e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur16e_kin.dir/src/ur_kin.cpp.i
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/src/ur_kin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.i
 .PHONY : src/ur_kin.cpp.i
 
 src/ur_kin.s: src/ur_kin.cpp.s
@@ -642,15 +477,15 @@ src/ur_kin.s: src/ur_kin.cpp.s
 
 # target to generate assembly for a file
 src/ur_kin.cpp.s:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/src/ur_kin.cpp.s
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_kin.dir/src/ur_kin.cpp.s
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.s
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/src/ur_kin.cpp.s
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_kin.dir/src/ur_kin.cpp.s
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10_kin.dir/src/ur_kin.cpp.s
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_kin.dir/src/ur_kin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_kin.dir/src/ur_kin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_kin.dir/src/ur_kin.cpp.s
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur16e_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur16e_kin.dir/src/ur_kin.cpp.s
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_kin.dir/src/ur_kin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_kin.dir/src/ur_kin.cpp.s
 .PHONY : src/ur_kin.cpp.s
 
 src/ur_moveit_plugin.o: src/ur_moveit_plugin.cpp.o
@@ -659,15 +494,15 @@ src/ur_moveit_plugin.o: src/ur_moveit_plugin.cpp.o
 
 # target to build an object file
 src/ur_moveit_plugin.cpp.o:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.o
 .PHONY : src/ur_moveit_plugin.cpp.o
 
 src/ur_moveit_plugin.i: src/ur_moveit_plugin.cpp.i
@@ -676,15 +511,15 @@ src/ur_moveit_plugin.i: src/ur_moveit_plugin.cpp.i
 
 # target to preprocess a source file
 src/ur_moveit_plugin.cpp.i:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.i
 .PHONY : src/ur_moveit_plugin.cpp.i
 
 src/ur_moveit_plugin.s: src/ur_moveit_plugin.cpp.s
@@ -693,15 +528,15 @@ src/ur_moveit_plugin.s: src/ur_moveit_plugin.cpp.s
 
 # target to generate assembly for a file
 src/ur_moveit_plugin.cpp.s:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur20_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur16e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur30_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur3e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur10e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/build.make universal_robot/ur_kinematics/CMakeFiles/ur5e_moveit_plugin.dir/src/ur_moveit_plugin.cpp.s
 .PHONY : src/ur_moveit_plugin.cpp.s
 
 # Help Target
@@ -710,42 +545,31 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... octomap_msgs_generate_messages_py"
-	@echo "... octomap_msgs_generate_messages_cpp"
-	@echo "... octomap_msgs_generate_messages_eus"
-	@echo "... moveit_msgs_generate_messages_py"
-	@echo "... ur3e_kin"
-	@echo "... moveit_msgs_generate_messages_nodejs"
-	@echo "... ur3_moveit_plugin"
-	@echo "... moveit_msgs_generate_messages_lisp"
-	@echo "... moveit_msgs_generate_messages_eus"
+	@echo "... ur20_moveit_plugin"
 	@echo "... ur16e_moveit_plugin"
 	@echo "... ur3_kin"
-	@echo "... octomap_msgs_generate_messages_nodejs"
-	@echo "... moveit_msgs_generate_messages_cpp"
-	@echo "... ur5_kin"
-	@echo "... ur5e_moveit_plugin"
-	@echo "... ur20_kin"
-	@echo "... ur10e_moveit_plugin"
+	@echo "... install/local"
 	@echo "... ur5e_kin"
 	@echo "... ur10_kin"
 	@echo "... ur10e_kin"
-	@echo "... octomap_msgs_generate_messages_lisp"
-	@echo "... moveit_ros_planning_gencfg"
+	@echo "... test"
+	@echo "... ur20_kin"
+	@echo "... ur3e_kin"
 	@echo "... ur16e_kin"
-	@echo "... ur30_kin"
-	@echo "... ur5_moveit_plugin"
 	@echo "... ur10_moveit_plugin"
-	@echo "... ur3e_moveit_plugin"
-	@echo "... install/local"
+	@echo "... ur30_kin"
+	@echo "... ur3_moveit_plugin"
+	@echo "... install/strip"
 	@echo "... ur30_moveit_plugin"
-	@echo "... ur20_moveit_plugin"
+	@echo "... ur3e_moveit_plugin"
+	@echo "... ur5_moveit_plugin"
+	@echo "... ur10e_moveit_plugin"
+	@echo "... ur5_kin"
+	@echo "... ur5e_moveit_plugin"
 	@echo "... src/ur_kin.o"
 	@echo "... src/ur_kin.i"
 	@echo "... src/ur_kin.s"

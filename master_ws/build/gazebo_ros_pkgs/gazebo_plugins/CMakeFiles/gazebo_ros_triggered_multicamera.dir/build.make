@@ -102,7 +102,6 @@ gazebo_ros_triggered_multicamera_EXTERNAL_OBJECTS =
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
@@ -130,7 +129,6 @@ gazebo_ros_triggered_multicamera_EXTERNAL_OBJECTS =
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
@@ -269,7 +267,8 @@ gazebo_ros_triggered_multicamera_EXTERNAL_OBJECTS =
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libsdformat9.so.9.8.0
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libgazebo_ros_triggered_multicamera.so: /usr/lib/x86_64-linux-gnu/libignition-transport8.so.8.3.0

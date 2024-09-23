@@ -280,7 +280,59 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0.779244 -1.36511 0 0 -0 0</pose>
+      <pose>0.438617 0.583977 0 0 -0 0</pose>
+    </model>
+    <model name='euro_pallet'>
+      <link name='link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>20</mass>
+          <inertia>
+            <ixx>2.43</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.1</iyy>
+            <iyz>0</iyz>
+            <izz>3.47</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0.05 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://euro_pallet/meshes/pallet.dae</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <pose>0 0 0.05 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://euro_pallet/meshes/pallet.dae</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-1.81925 -0.555672 0 0 -0 0</pose>
     </model>
     <model name='conveyor'>
       <link name='link_0'>
@@ -296,7 +348,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>-0.016 0 0.2 0 -0 0</pose>
+        <pose>0 -0.00065 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -394,7 +446,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>-0.356 -0.96 -0.26 0 -0 0</pose>
+        <pose>0.34 -0.9574 -0.46 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -492,7 +544,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>-0.356 0.96 -0.26 0 -0 0</pose>
+        <pose>0.34 0.95935 -0.46 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -577,7 +629,7 @@
           </surface>
         </collision>
       </link>
-      <link name='link_1_clone_clone'>
+      <link name='link_1_clone_0'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -590,7 +642,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>0.324 0.96 -0.26 0 -0 0</pose>
+        <pose>-0.34 0.95935 -0.46 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -675,7 +727,7 @@
           </surface>
         </collision>
       </link>
-      <link name='link_1_clone_clone_clone'>
+      <link name='link_1_clone_1'>
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -688,7 +740,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>0.324 -0.96 -0.26 0 -0 0</pose>
+        <pose>-0.34 -0.96065 -0.46 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -775,70 +827,8 @@
       </link>
       <joint name='link_0_JOINT_0' type='fixed'>
         <parent>link_0</parent>
-        <child>link_1_clone_clone_clone</child>
-        <pose>0 0 0 0 -0 0</pose>
-        <physics>
-          <ode>
-            <limit>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </limit>
-            <suspension>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </suspension>
-          </ode>
-        </physics>
-      </joint>
-      <joint name='link_0_JOINT_2' type='revolute'>
-        <parent>link_0</parent>
-        <child>link_1_clone_clone</child>
-        <pose>0 0 0 0 -0 0</pose>
-        <axis>
-          <xyz>1 0 0</xyz>
-          <limit>
-            <lower>-1.79769e+308</lower>
-            <upper>1.79769e+308</upper>
-            <effort>-1</effort>
-            <velocity>-1</velocity>
-          </limit>
-          <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
-          </dynamics>
-        </axis>
-        <physics>
-          <ode>
-            <limit>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </limit>
-            <suspension>
-              <cfm>0</cfm>
-              <erp>0.2</erp>
-            </suspension>
-          </ode>
-        </physics>
-      </joint>
-      <joint name='link_0_JOINT_3' type='revolute'>
-        <parent>link_0</parent>
         <child>link_1</child>
         <pose>0 0 0 0 -0 0</pose>
-        <axis>
-          <xyz>1 0 0</xyz>
-          <limit>
-            <lower>-1.79769e+308</lower>
-            <upper>1.79769e+308</upper>
-            <effort>-1</effort>
-            <velocity>-1</velocity>
-          </limit>
-          <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
-          </dynamics>
-        </axis>
         <physics>
           <ode>
             <limit>
@@ -852,24 +842,44 @@
           </ode>
         </physics>
       </joint>
-      <joint name='link_0_JOINT_4' type='revolute'>
+      <joint name='link_0_JOINT_1' type='fixed'>
         <parent>link_0</parent>
         <child>link_1_clone</child>
         <pose>0 0 0 0 -0 0</pose>
-        <axis>
-          <xyz>1 0 0</xyz>
-          <limit>
-            <lower>-1.79769e+308</lower>
-            <upper>1.79769e+308</upper>
-            <effort>-1</effort>
-            <velocity>-1</velocity>
-          </limit>
-          <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
-          </dynamics>
-        </axis>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='link_0_JOINT_2' type='fixed'>
+        <parent>link_0</parent>
+        <child>link_1_clone_0</child>
+        <pose>0 0 0 0 -0 0</pose>
+        <physics>
+          <ode>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+            <suspension>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </suspension>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='link_0_JOINT_3' type='fixed'>
+        <parent>link_0</parent>
+        <child>link_1_clone_1</child>
+        <pose>0 0 0 0 -0 0</pose>
         <physics>
           <ode>
             <limit>
@@ -885,59 +895,7 @@
       </joint>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose>1.0724 -3.22258 0.3 0 -0 0</pose>
-    </model>
-    <model name='euro_pallet'>
-      <link name='link'>
-        <pose>0 0 0 0 -0 0</pose>
-        <inertial>
-          <mass>20</mass>
-          <inertia>
-            <ixx>2.43</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1.1</iyy>
-            <iyz>0</iyz>
-            <izz>3.47</izz>
-          </inertia>
-          <pose>0 0 0 0 -0 0</pose>
-        </inertial>
-        <collision name='collision'>
-          <pose>0 0 0.05 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://euro_pallet/meshes/pallet.dae</uri>
-              <scale>0.1 0.1 0.1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <pose>0 0 0.05 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://euro_pallet/meshes/pallet.dae</uri>
-              <scale>0.1 0.1 0.1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>-1.55746 -2.87704 0 0 -0 0</pose>
+      <pose>1 -1.76553 0.5 0 -0 0</pose>
     </model>
     <model name='support'>
       <link name='link_2'>
@@ -953,7 +911,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>-0 -0 0 0 -0 0</pose>
+        <pose>-0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -1042,55 +1000,55 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose>0.071623 -0.097291 0.5 0 -0 0</pose>
+      <pose>0.06313 -0.201767 0.5 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>569 288000000</sim_time>
-      <real_time>570 6814110</real_time>
-      <wall_time>1723250554 599820379</wall_time>
-      <iterations>569288</iterations>
+      <sim_time>339 991000000</sim_time>
+      <real_time>344 896705603</real_time>
+      <wall_time>1719408881 762302189</wall_time>
+      <iterations>339991</iterations>
       <model name='conveyor'>
-        <pose>-1.02168 0.003639 0.760003 -2e-06 -0 0.021223</pose>
+        <pose>0.741122 0.013281 0.96 0 -0 0.000107</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose>-1.03768 0.0033 0.960003 -2e-06 -0 0.021223</pose>
-          <velocity>0.001844 -0.001656 0.004163 0.004459 0.002226 -0.000118</velocity>
-          <acceleration>5.22016 -4.52972 8.04132 -2.96532 -1.20681 -0.76895</acceleration>
-          <wrench>5.22016 -4.52972 8.04132 0 -0 0</wrench>
+          <pose>0.741122 0.012631 0.96 0 -0 0.000107</pose>
+          <velocity>-0 0 -0 0 -0 0</velocity>
+          <acceleration>2e-06 -3e-06 2e-06 -1e-06 5e-06 5e-06</acceleration>
+          <wrench>2e-06 -3e-06 2e-06 0 -0 0</wrench>
         </link>
         <link name='link_1'>
-          <pose>-1.35723 -0.963699 0.500005 -0.00012 -0 0.021223</pose>
-          <velocity>0.000791 0.000657 -3.1e-05 -0.001323 0.001599 -0.0001</velocity>
-          <acceleration>2.22245 0.442019 -0.227107 2.1953 -1.36873 2.39686</acceleration>
-          <wrench>2.22245 0.442019 -0.227107 0 -0 0</wrench>
+          <pose>1.08122 -0.944083 0.5 0 -0 0.000107</pose>
+          <velocity>-0 0 -0 0 -0 0</velocity>
+          <acceleration>3e-06 -0 0 1e-06 6e-06 5e-06</acceleration>
+          <wrench>3e-06 -0 0 0 -0 0</wrench>
         </link>
         <link name='link_1_clone'>
-          <pose>-1.39797 0.955868 0.500003 -7.8e-05 -0 0.021223</pose>
-          <velocity>0.0011 0.000188 0.009658 -0.00038 0.002216 -0.000198</velocity>
-          <acceleration>3.72687 0.126103 19.7808 -2.63766 -1.38637 -0.829585</acceleration>
-          <wrench>3.72687 0.126103 19.7808 0 -0 0</wrench>
+          <pose>1.08102 0.972667 0.5 0 -0 0.000107</pose>
+          <velocity>1e-06 -0 -0 0 -0 0</velocity>
+          <acceleration>-1e-06 -1e-06 0 1e-06 1e-06 7e-06</acceleration>
+          <wrench>-1e-06 -1e-06 0 0 -0 0</wrench>
         </link>
-        <link name='link_1_clone_clone'>
-          <pose>-0.718127 0.970299 0.500001 2.4e-05 -0 0.021223</pose>
-          <velocity>0.001013 0.000726 0.007848 -0.001454 0.002017 -0.000108</velocity>
-          <acceleration>3.68979 -0.010245 15.7691 -1.42908 -1.56553 -0.757518</acceleration>
-          <wrench>3.68979 -0.010245 15.7691 0 -0 0</wrench>
+        <link name='link_1_clone_0'>
+          <pose>0.40102 0.972595 0.5 0 -0 0.000107</pose>
+          <velocity>-0 0 -0 0 1e-06 0</velocity>
+          <acceleration>-4e-06 -5e-06 -0 1e-05 -1e-05 3e-06</acceleration>
+          <wrench>-4e-06 -5e-06 -0 0 -0 0</wrench>
         </link>
-        <link name='link_1_clone_clone_clone'>
-          <pose>-0.677382 -0.949269 0.500003 -1e-06 -0 0.021223</pose>
-          <velocity>0.000593 6.8e-05 -5.6e-05 0.004 0.002174 -0.000189</velocity>
-          <acceleration>2.06211 -0.415367 -2.84309 -2.96281 -1.24699 -0.798179</acceleration>
-          <wrench>2.06211 -0.415367 -2.84309 0 -0 0</wrench>
+        <link name='link_1_clone_1'>
+          <pose>0.401225 -0.947406 0.5 0 -0 0.000107</pose>
+          <velocity>-1e-06 0 -0 0 -0 0</velocity>
+          <acceleration>3e-06 -1e-06 -0 3e-06 4e-06 4e-06</acceleration>
+          <wrench>3e-06 -1e-06 -0 0 -0 0</wrench>
         </link>
       </model>
       <model name='euro_pallet'>
-        <pose>0.795693 -0.944306 0.071999 0 -4e-06 -0.013016</pose>
+        <pose>-1.21699 -0.409667 0.071997 0 -1e-05 -0.013016</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>0.795693 -0.944306 0.071999 0 -4e-06 -0.013016</pose>
+          <pose>-1.21699 -0.409667 0.071997 0 -1e-05 -0.013016</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.029115 0.000348 -9.71815 -0.007704 -0.404598 -1e-05</acceleration>
-          <wrench>-0.582299 0.00696 -194.363 0 -0 0</wrench>
+          <acceleration>-0.10148 0.001297 -9.51479 -0.028035 -1.40993 -1.9e-05</acceleration>
+          <wrench>-2.0296 0.025937 -190.296 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
@@ -1104,20 +1062,20 @@
         </link>
       </model>
       <model name='support'>
-        <pose>0.071624 -0.09729 0.399998 -1e-06 1e-06 0</pose>
+        <pose>1e-06 1e-06 0.399998 -1e-06 1e-06 0</pose>
         <scale>1 1 1</scale>
         <link name='link_2'>
-          <pose>0.071624 -0.09729 0.399998 -1e-06 1e-06 0</pose>
+          <pose>1e-06 1e-06 0.399998 -1e-06 1e-06 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='table'>
-        <pose>0.481166 1.08671 0 0 -0 0</pose>
+        <pose>-0.470984 1.03526 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>0.481166 1.08671 0 0 -0 0</pose>
+          <pose>-0.470984 1.03526 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1129,7 +1087,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>5.82348 1.05174 2.67111 0 0.361797 -2.89804</pose>
+        <pose>2.13954 -7.2894 4.42073 0 0.451643 1.8362</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>

@@ -18,6 +18,7 @@
     <joint name="fixed" type="fixed">
         <parent link="world"/>
         <child link="base_link"/>
+        <origin xyz="0 0.0 0.8" rpy="0 0 0"/>
     </joint>
 
     <!-- Create Link 1 using xacro-->
@@ -260,6 +261,15 @@
         <parent link="link_6"/>
         <child link="tool_0"/>
         <origin xyz="0.0 0.0 0.02" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+    <link name="picking_point">
+    </link>    
+
+    <joint name="tool_0_picking_point" type="fixed">
+        <parent link="tool_0"/>
+        <child link="picking_point"/>
+        <origin xyz="0.0 0.0 0.08" rpy="0.0 0.0 0.0"/>
     </joint>
 
     <xacro:custom_gripper parent="tool_0" origin_xyz="0.0 0.0 0.0"/>

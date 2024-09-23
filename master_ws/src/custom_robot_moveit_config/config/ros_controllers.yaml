@@ -1,0 +1,23 @@
+joint_state_controller: 
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+controller_list: 
+  - name: /cobot/arm_controller
+    action_ns: follow_joint_trajectory
+    default: True 
+    type: FollowJointTrajectory
+    joints: 
+      - base_link__link_1
+      - link_1__link_2
+      - link_2__link_3
+      - link_3__link_4
+      - link_4__link_5
+      - link_5__link_6
+
+  - name: /cobot/gripper_controller
+    action_ns: follow_joint_trajectory
+    default: True 
+    type: FollowJointTrajectory
+    joints: 
+      - finger_right_joint

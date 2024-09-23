@@ -137,7 +137,6 @@ roboticsgroup_gazebo_mimic_joint_plugin_EXTERNAL_OBJECTS =
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat9.so.9.8.0
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
@@ -167,6 +166,8 @@ roboticsgroup_gazebo_mimic_joint_plugin_EXTERNAL_OBJECTS =
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-common3.so.3.14.2
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so.3.6
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so.3.6
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/libroboticsgroup_gazebo_mimic_joint_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so

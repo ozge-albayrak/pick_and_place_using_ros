@@ -178,7 +178,8 @@ gazebo_request_object_info_EXTERNAL_OBJECTS =
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/gazebo_state_plugins/gazebo_request_object_info: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/gazebo_state_plugins/gazebo_request_object_info: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/gazebo_state_plugins/gazebo_request_object_info: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/gazebo_state_plugins/gazebo_request_object_info: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/gazebo_state_plugins/gazebo_request_object_info: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/gazebo_state_plugins/gazebo_request_object_info: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/gazebo_state_plugins/gazebo_request_object_info: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/gazebo_state_plugins/gazebo_request_object_info: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/devel/lib/gazebo_state_plugins/gazebo_request_object_info: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so.3.6
