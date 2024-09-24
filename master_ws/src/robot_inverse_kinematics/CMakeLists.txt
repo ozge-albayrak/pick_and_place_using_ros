@@ -166,6 +166,16 @@ add_executable(test_ik_collision_objects src/test_ik_collision_objects.cpp)
 add_dependencies(test_ik_collision_objects ${cobot_test_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(test_ik_collision_objects ${catkin_LIBRARIES})
 
+add_executable(pick_and_place src/pick_and_place.cpp)
+add_dependencies(pick_and_place ${cobot_test_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(pick_and_place ${catkin_LIBRARIES})
+
+add_executable(pick_and_place_class src/pick_and_place.cpp)
+add_dependencies(pick_and_place_class ${cobot_test_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(pick_and_place_class ${catkin_LIBRARIES})
+
+
+
 #############
 ## Install ##
 #############

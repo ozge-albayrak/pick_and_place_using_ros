@@ -6057,19 +6057,6 @@ pcl_msgs_generate_messages_eus/fast:
 .PHONY : pcl_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named pcl_msgs_generate_messages_lisp
-
-# Build rule for target.
-pcl_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pcl_msgs_generate_messages_lisp
-.PHONY : pcl_msgs_generate_messages_lisp
-
-# fast build rule for target.
-pcl_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
-.PHONY : pcl_msgs_generate_messages_lisp/fast
-
-#=============================================================================
 # Target rules for targets named pcl_msgs_generate_messages_py
 
 # Build rule for target.
@@ -6083,6 +6070,32 @@ pcl_msgs_generate_messages_py/fast:
 .PHONY : pcl_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named pcl_msgs_generate_messages_lisp
+
+# Build rule for target.
+pcl_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pcl_msgs_generate_messages_lisp
+.PHONY : pcl_msgs_generate_messages_lisp
+
+# fast build rule for target.
+pcl_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
+.PHONY : pcl_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named pick_and_place_class
+
+# Build rule for target.
+pick_and_place_class: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pick_and_place_class
+.PHONY : pick_and_place_class
+
+# fast build rule for target.
+pick_and_place_class/fast:
+	$(MAKE) -f robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/build.make robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/build
+.PHONY : pick_and_place_class/fast
+
+#=============================================================================
 # Target rules for targets named pcl_ros_gencfg
 
 # Build rule for target.
@@ -6094,6 +6107,19 @@ pcl_ros_gencfg: cmake_check_build_system
 pcl_ros_gencfg/fast:
 	$(MAKE) -f robot_inverse_kinematics/CMakeFiles/pcl_ros_gencfg.dir/build.make robot_inverse_kinematics/CMakeFiles/pcl_ros_gencfg.dir/build
 .PHONY : pcl_ros_gencfg/fast
+
+#=============================================================================
+# Target rules for targets named pick_and_place
+
+# Build rule for target.
+pick_and_place: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pick_and_place
+.PHONY : pick_and_place
+
+# fast build rule for target.
+pick_and_place/fast:
+	$(MAKE) -f robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/build.make robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/build
+.PHONY : pick_and_place/fast
 
 #=============================================================================
 # Target rules for targets named pcl_msgs_generate_messages_cpp
@@ -6122,32 +6148,6 @@ nodelet_topic_tools_gencfg/fast:
 .PHONY : nodelet_topic_tools_gencfg/fast
 
 #=============================================================================
-# Target rules for targets named topic_tools_generate_messages_py
-
-# Build rule for target.
-topic_tools_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 topic_tools_generate_messages_py
-.PHONY : topic_tools_generate_messages_py
-
-# fast build rule for target.
-topic_tools_generate_messages_py/fast:
-	$(MAKE) -f robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/build.make robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/build
-.PHONY : topic_tools_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named test_ik
-
-# Build rule for target.
-test_ik: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_ik
-.PHONY : test_ik
-
-# fast build rule for target.
-test_ik/fast:
-	$(MAKE) -f robot_inverse_kinematics/CMakeFiles/test_ik.dir/build.make robot_inverse_kinematics/CMakeFiles/test_ik.dir/build
-.PHONY : test_ik/fast
-
-#=============================================================================
 # Target rules for targets named topic_tools_generate_messages_eus
 
 # Build rule for target.
@@ -6172,6 +6172,32 @@ topic_tools_generate_messages_nodejs: cmake_check_build_system
 topic_tools_generate_messages_nodejs/fast:
 	$(MAKE) -f robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
 .PHONY : topic_tools_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named topic_tools_generate_messages_py
+
+# Build rule for target.
+topic_tools_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 topic_tools_generate_messages_py
+.PHONY : topic_tools_generate_messages_py
+
+# fast build rule for target.
+topic_tools_generate_messages_py/fast:
+	$(MAKE) -f robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/build.make robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/build
+.PHONY : topic_tools_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named test_ik
+
+# Build rule for target.
+test_ik: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_ik
+.PHONY : test_ik
+
+# fast build rule for target.
+test_ik/fast:
+	$(MAKE) -f robot_inverse_kinematics/CMakeFiles/test_ik.dir/build.make robot_inverse_kinematics/CMakeFiles/test_ik.dir/build
+.PHONY : test_ik/fast
 
 #=============================================================================
 # Target rules for targets named test_ik_collision_objects
@@ -6886,15 +6912,17 @@ help:
 	@echo "... moveit_msgs_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... pcl_msgs_generate_messages_eus"
-	@echo "... pcl_msgs_generate_messages_lisp"
 	@echo "... pcl_msgs_generate_messages_py"
+	@echo "... pcl_msgs_generate_messages_lisp"
+	@echo "... pick_and_place_class"
 	@echo "... pcl_ros_gencfg"
+	@echo "... pick_and_place"
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... nodelet_topic_tools_gencfg"
-	@echo "... topic_tools_generate_messages_py"
-	@echo "... test_ik"
 	@echo "... topic_tools_generate_messages_eus"
 	@echo "... topic_tools_generate_messages_nodejs"
+	@echo "... topic_tools_generate_messages_py"
+	@echo "... test_ik"
 	@echo "... test_ik_collision_objects"
 	@echo "... ur20_moveit_plugin"
 	@echo "... ur16e_moveit_plugin"

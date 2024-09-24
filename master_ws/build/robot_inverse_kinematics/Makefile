@@ -408,21 +408,6 @@ pcl_msgs_generate_messages_eus/fast:
 .PHONY : pcl_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
-.PHONY : robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-pcl_msgs_generate_messages_lisp: robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : pcl_msgs_generate_messages_lisp
-
-# fast build rule for target.
-pcl_msgs_generate_messages_lisp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
-.PHONY : pcl_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule:
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
 .PHONY : robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
@@ -438,6 +423,36 @@ pcl_msgs_generate_messages_py/fast:
 .PHONY : pcl_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+.PHONY : robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+pcl_msgs_generate_messages_lisp: robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : pcl_msgs_generate_messages_lisp
+
+# fast build rule for target.
+pcl_msgs_generate_messages_lisp/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
+.PHONY : pcl_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/rule
+.PHONY : robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/rule
+
+# Convenience name for target.
+pick_and_place_class: robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/rule
+
+.PHONY : pick_and_place_class
+
+# fast build rule for target.
+pick_and_place_class/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/build.make robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/build
+.PHONY : pick_and_place_class/fast
+
+# Convenience name for target.
 robot_inverse_kinematics/CMakeFiles/pcl_ros_gencfg.dir/rule:
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/pcl_ros_gencfg.dir/rule
 .PHONY : robot_inverse_kinematics/CMakeFiles/pcl_ros_gencfg.dir/rule
@@ -451,6 +466,21 @@ pcl_ros_gencfg: robot_inverse_kinematics/CMakeFiles/pcl_ros_gencfg.dir/rule
 pcl_ros_gencfg/fast:
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pcl_ros_gencfg.dir/build.make robot_inverse_kinematics/CMakeFiles/pcl_ros_gencfg.dir/build
 .PHONY : pcl_ros_gencfg/fast
+
+# Convenience name for target.
+robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/rule
+.PHONY : robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/rule
+
+# Convenience name for target.
+pick_and_place: robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/rule
+
+.PHONY : pick_and_place
+
+# fast build rule for target.
+pick_and_place/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/build.make robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/build
+.PHONY : pick_and_place/fast
 
 # Convenience name for target.
 robot_inverse_kinematics/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
@@ -483,36 +513,6 @@ nodelet_topic_tools_gencfg/fast:
 .PHONY : nodelet_topic_tools_gencfg/fast
 
 # Convenience name for target.
-robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-.PHONY : robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_py: robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-.PHONY : topic_tools_generate_messages_py
-
-# fast build rule for target.
-topic_tools_generate_messages_py/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/build.make robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/build
-.PHONY : topic_tools_generate_messages_py/fast
-
-# Convenience name for target.
-robot_inverse_kinematics/CMakeFiles/test_ik.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/test_ik.dir/rule
-.PHONY : robot_inverse_kinematics/CMakeFiles/test_ik.dir/rule
-
-# Convenience name for target.
-test_ik: robot_inverse_kinematics/CMakeFiles/test_ik.dir/rule
-
-.PHONY : test_ik
-
-# fast build rule for target.
-test_ik/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/test_ik.dir/build.make robot_inverse_kinematics/CMakeFiles/test_ik.dir/build
-.PHONY : test_ik/fast
-
-# Convenience name for target.
 robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
 .PHONY : robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
@@ -543,6 +543,36 @@ topic_tools_generate_messages_nodejs/fast:
 .PHONY : topic_tools_generate_messages_nodejs/fast
 
 # Convenience name for target.
+robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+.PHONY : robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_py: robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+
+.PHONY : topic_tools_generate_messages_py
+
+# fast build rule for target.
+topic_tools_generate_messages_py/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/build.make robot_inverse_kinematics/CMakeFiles/topic_tools_generate_messages_py.dir/build
+.PHONY : topic_tools_generate_messages_py/fast
+
+# Convenience name for target.
+robot_inverse_kinematics/CMakeFiles/test_ik.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/test_ik.dir/rule
+.PHONY : robot_inverse_kinematics/CMakeFiles/test_ik.dir/rule
+
+# Convenience name for target.
+test_ik: robot_inverse_kinematics/CMakeFiles/test_ik.dir/rule
+
+.PHONY : test_ik
+
+# fast build rule for target.
+test_ik/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/test_ik.dir/build.make robot_inverse_kinematics/CMakeFiles/test_ik.dir/build
+.PHONY : test_ik/fast
+
+# Convenience name for target.
 robot_inverse_kinematics/CMakeFiles/test_ik_collision_objects.dir/rule:
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_inverse_kinematics/CMakeFiles/test_ik_collision_objects.dir/rule
 .PHONY : robot_inverse_kinematics/CMakeFiles/test_ik_collision_objects.dir/rule
@@ -556,6 +586,36 @@ test_ik_collision_objects: robot_inverse_kinematics/CMakeFiles/test_ik_collision
 test_ik_collision_objects/fast:
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/test_ik_collision_objects.dir/build.make robot_inverse_kinematics/CMakeFiles/test_ik_collision_objects.dir/build
 .PHONY : test_ik_collision_objects/fast
+
+src/pick_and_place.o: src/pick_and_place.cpp.o
+
+.PHONY : src/pick_and_place.o
+
+# target to build an object file
+src/pick_and_place.cpp.o:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/build.make robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/src/pick_and_place.cpp.o
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/build.make robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.o
+.PHONY : src/pick_and_place.cpp.o
+
+src/pick_and_place.i: src/pick_and_place.cpp.i
+
+.PHONY : src/pick_and_place.i
+
+# target to preprocess a source file
+src/pick_and_place.cpp.i:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/build.make robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/src/pick_and_place.cpp.i
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/build.make robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.i
+.PHONY : src/pick_and_place.cpp.i
+
+src/pick_and_place.s: src/pick_and_place.cpp.s
+
+.PHONY : src/pick_and_place.s
+
+# target to generate assembly for a file
+src/pick_and_place.cpp.s:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/build.make robot_inverse_kinematics/CMakeFiles/pick_and_place_class.dir/src/pick_and_place.cpp.s
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/build.make robot_inverse_kinematics/CMakeFiles/pick_and_place.dir/src/pick_and_place.cpp.s
+.PHONY : src/pick_and_place.cpp.s
 
 src/test_ik.o: src/test_ik.cpp.o
 
@@ -637,19 +697,24 @@ help:
 	@echo "... test"
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... pcl_msgs_generate_messages_eus"
-	@echo "... pcl_msgs_generate_messages_lisp"
 	@echo "... pcl_msgs_generate_messages_py"
+	@echo "... pcl_msgs_generate_messages_lisp"
+	@echo "... pick_and_place_class"
 	@echo "... install/local"
 	@echo "... pcl_ros_gencfg"
+	@echo "... pick_and_place"
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... nodelet_topic_tools_gencfg"
+	@echo "... edit_cache"
+	@echo "... topic_tools_generate_messages_eus"
+	@echo "... rebuild_cache"
+	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... test_ik"
-	@echo "... topic_tools_generate_messages_eus"
-	@echo "... edit_cache"
-	@echo "... topic_tools_generate_messages_nodejs"
-	@echo "... rebuild_cache"
 	@echo "... test_ik_collision_objects"
+	@echo "... src/pick_and_place.o"
+	@echo "... src/pick_and_place.i"
+	@echo "... src/pick_and_place.s"
 	@echo "... src/test_ik.o"
 	@echo "... src/test_ik.i"
 	@echo "... src/test_ik.s"
