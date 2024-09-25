@@ -17,7 +17,8 @@ int main(int argc, char **argv)
     sleep(2.0);
     
     // instantiate the moveit object MoveGroupInterface PlanningSceneInterface
-    moveit::planning_interface::MoveGroupInterface group("arm");
+    // moveit::planning_interface::MoveGroupInterface group("arm");
+    moveit::planning_interface::MoveGroupInterface group("manipulator");
     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
     
     //publisher
@@ -32,17 +33,29 @@ int main(int argc, char **argv)
     // create an object of type geomerty_msgs
     geometry_msgs::Pose target_pose1;
 
+    // tf2::Quaternion orientation;
+    // orientation.setRPY(-3.019,0.009,-1.644);
+    // // convert orientation in roll, pitch and yaw in quaternion
+    // target_pose1.orientation = tf2::toMsg(orientation);
+
+    // // setup the target position x, y and z
+    // target_pose1.position.x = 0.622;
+    // target_pose1.position.y = 0.008;
+    // target_pose1.position.z = 0.430;
+
     tf2::Quaternion orientation;
-    orientation.setRPY(-3.019,0.009,-1.644);
+    orientation.setRPY(0,0,0);
     // convert orientation in roll, pitch and yaw in quaternion
     target_pose1.orientation = tf2::toMsg(orientation);
 
     // setup the target position x, y and z
-    target_pose1.position.x = 0.622;
-    target_pose1.position.y = 0.008;
-    target_pose1.position.z = 0.430;
+    target_pose1.position.x = 0.5;
+    target_pose1.position.y = 0.5;
+    target_pose1.position.z = 0.5;
 
-    group.setPoseTarget(target_pose1, "picking_point");
+    // group.setPoseTarget(target_pose1, "picking_point");
+    group.setPoseTarget(target_pose1, "tool0");
+
 
     // visualize the planning
     moveit::planning_interface::MoveGroupInterface::Plan my_plan;

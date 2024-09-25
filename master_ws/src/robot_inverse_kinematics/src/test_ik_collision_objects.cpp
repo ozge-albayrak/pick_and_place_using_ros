@@ -17,7 +17,7 @@ int main(int argc, char **argv)
     sleep(2.0);
     
     // instantiate the moveit object MoveGroupInterface PlanningSceneInterface
-    moveit::planning_interface::MoveGroupInterface group("arm");
+    moveit::planning_interface::MoveGroupInterface group("manipulator");
     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
     
     //publisher
@@ -32,22 +32,32 @@ int main(int argc, char **argv)
     // create an object of type geomerty_msgs
     geometry_msgs::Pose target_pose1;
 
+    // tf2::Quaternion orientation;
+    // orientation.setRPY(-3.019,0.009,-1.644);
+    // // convert orientation in roll, pitch and yaw in quaternion
+    // target_pose1.orientation = tf2::toMsg(orientation);
+
+    // // setup the target position x, y and z
+    // target_pose1.position.x = 0.622;
+    // target_pose1.position.y = 0.008;
+    // target_pose1.position.z = 0.430;
+
     tf2::Quaternion orientation;
-    orientation.setRPY(-3.019,0.009,-1.644);
+    orientation.setRPY(0,0,0);
     // convert orientation in roll, pitch and yaw in quaternion
     target_pose1.orientation = tf2::toMsg(orientation);
 
     // setup the target position x, y and z
-    target_pose1.position.x = 0.622;
-    target_pose1.position.y = 0.008;
-    target_pose1.position.z = 0.430;
+    target_pose1.position.x = 0.5;
+    target_pose1.position.y = 0.5;
+    target_pose1.position.z = 0.5;
 
-    group.setPoseTarget(target_pose1, "picking_point");
+    group.setPoseTarget(target_pose1, "tool0");
 
     // collision object
     std::vector<moveit_msgs::CollisionObject> collision_objects;
     // resizing the base object under the robot arm
-    collision_objects.resize(3);
+    collision_objects.resize(4);
 
     // add the first conveyour 
     collision_objects[0].id = "table1";
@@ -111,7 +121,29 @@ int main(int argc, char **argv)
     // Add the base to the scene
     collision_objects[2].operation = collision_objects[2].ADD;
 
-    // add the object to the scene
+    // Add the grabbing object 
+    collision_objects[3].id = "object";
+    collision_objects[3].header.frame_id = "world";
+
+    // Define primitive dimension, position of the object
+    collision_objects[3].primitives.resize(1);
+    collision_objects[3].primitives[0].type = collision_objects[3].primitives[0].BOX;
+    collision_objects[3].primitives[0].dimensions.resize(3);
+    collision_objects[3].primitives[0].dimensions[0] = 0.02;
+    collision_objects[3].primitives[0].dimensions[1] = 0.02;
+    collision_objects[3].primitives[0].dimensions[2] = 0.2;
+    
+    // pose the object
+    collision_objects[3].primitive_poses.resize(1);
+    collision_objects[3].primitive_poses[0].position.x = 0.642;
+    collision_objects[3].primitive_poses[0].position.y = -0.031;
+    collision_objects[3].primitive_poses[0].position.z = 1.1;
+    collision_objects[3].primitive_poses[0].orientation.w = 1.0;
+
+    // Add the object to the scene
+    collision_objects[3].operation = collision_objects[3].ADD;
+
+    // add the objects to the scene
     planning_scene_interface.applyCollisionObjects(collision_objects);
 
 

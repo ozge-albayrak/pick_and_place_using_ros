@@ -15,7 +15,7 @@ public:
 
     void close_gripper()
     {
-        gripper.setJointValueTarget("finger_right_joint", 0.01);
+        gripper.setJointValueTarget("finger_right_joint", 0.05);
         gripper.move();
     }
 
