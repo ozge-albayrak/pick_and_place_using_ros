@@ -73,7 +73,7 @@ void addCollisionObject(moveit::planning_interface::PlanningSceneInterface& plan
     // collision object
     std::vector<moveit_msgs::CollisionObject> collision_objects;
     // creating n number of objects in the scene
-    collision_objects.resize(3);
+    collision_objects.resize(4);
 
     // add the first conveyour 
     collision_objects[0].id = "table1";
@@ -138,25 +138,25 @@ void addCollisionObject(moveit::planning_interface::PlanningSceneInterface& plan
     collision_objects[2].operation = collision_objects[2].ADD;
 
     // add the red cube to grab
-    // collision_objects[3].id = "object";
-    // collision_objects[3].header.frame_id = "world";
+    collision_objects[3].id = "object";
+    collision_objects[3].header.frame_id = "world";
 
-    // // Define primitive dimension, position of the object 
-    // collision_objects[3].primitives.resize(1);
-    // collision_objects[3].primitives[0].type = collision_objects[3].primitives[0].BOX;
-    // collision_objects[3].primitives[0].dimensions.resize(3);
-    // collision_objects[3].primitives[0].dimensions[0] = 0.02;
-    // collision_objects[3].primitives[0].dimensions[1] = 0.02;
-    // collision_objects[3].primitives[0].dimensions[2] = 0.2;
+    // Define primitive dimension, position of the object 
+    collision_objects[3].primitives.resize(1);
+    collision_objects[3].primitives[0].type = collision_objects[3].primitives[0].BOX;
+    collision_objects[3].primitives[0].dimensions.resize(3);
+    collision_objects[3].primitives[0].dimensions[0] = 0.02;
+    collision_objects[3].primitives[0].dimensions[1] = 0.02;
+    collision_objects[3].primitives[0].dimensions[2] = 0.2;
     
-    // // pose of the object
-    // collision_objects[3].primitive_poses.resize(1);
-    // collision_objects[3].primitive_poses[0].position.x = 0.642;
-    // collision_objects[3].primitive_poses[0].position.y = -0.031;
-    // collision_objects[3].primitive_poses[0].position.z = 1.1;
-    // collision_objects[3].primitive_poses[0].orientation.w = 1.0;
-    // // Add the object to the scene
-    // collision_objects[3].operation = collision_objects[3].ADD;
+    // pose of the object
+    collision_objects[3].primitive_poses.resize(1);
+    collision_objects[3].primitive_poses[0].position.x = 0.642;
+    collision_objects[3].primitive_poses[0].position.y = -0.031;
+    collision_objects[3].primitive_poses[0].position.z = 1.1;
+    collision_objects[3].primitive_poses[0].orientation.w = 1.0;
+    // Add the object to the scene
+    collision_objects[3].operation = collision_objects[3].ADD;
 
     // add the object to the scene
     planning_scene_interface.applyCollisionObjects(collision_objects);

@@ -15,7 +15,7 @@ public:
 
     void close_gripper()
     {
-        gripper.setJointValueTarget("finger_right_joint", 0.04);
+        gripper.setJointValueTarget("finger_right_joint", 0.01);
         gripper.move();
     }
 
@@ -80,7 +80,7 @@ public:
         collision_objects[0].primitive_poses[0].position.y = 0;
         collision_objects[0].primitive_poses[0].position.z = -0.3;
         collision_objects[0].primitive_poses[0].orientation.w = 1.0;
-        // Add tabe 1 to the scene
+        // Add table 1 to the scene
 
         collision_objects[0].operation = collision_objects[0].ADD;
 
@@ -102,12 +102,12 @@ public:
         collision_objects[1].primitive_poses[0].position.y = 1;
         collision_objects[1].primitive_poses[0].position.z = -0.3;
         collision_objects[1].primitive_poses[0].orientation.w = 1.0;
-        // Add tabe 2 to the scene
+        // Add table 2 to the scene
         collision_objects[1].operation = collision_objects[1].ADD;
 
 
-        // add the basement
-        collision_objects[2].id = "base";
+        // add the base
+        collision_objects[2].id = "basement";
         collision_objects[2].header.frame_id = "base_link";
 
         // Define primitive dimension, position of the base
@@ -117,13 +117,13 @@ public:
         collision_objects[2].primitives[0].dimensions[0] = 0.8;
         collision_objects[2].primitives[0].dimensions[1] = 0.2;
         
-        // pose of the base 
+        // pose of the robot base
         collision_objects[2].primitive_poses.resize(1);
         collision_objects[2].primitive_poses[0].position.x = 0;
         collision_objects[2].primitive_poses[0].position.y = 0;
         collision_objects[2].primitive_poses[0].position.z = -0.4;
         collision_objects[2].primitive_poses[0].orientation.w = 1.0;
-        // Add tabe 2 to the scene
+        // Add the base to the scene
         collision_objects[2].operation = collision_objects[2].ADD;
 
 
@@ -131,7 +131,7 @@ public:
         collision_objects[3].id = "red_cuboid";
         collision_objects[3].header.frame_id = "base_link";
 
-        // Define primitive dimension, position of the obejct 
+        // Define primitive dimension, position of the object
         collision_objects[3].primitives.resize(1);
         collision_objects[3].primitives[0].type = collision_objects[3].primitives[0].BOX;
         collision_objects[3].primitives[0].dimensions.resize(3);
