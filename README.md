@@ -4,7 +4,7 @@
 This project is focused on learning and implementing various concepts in Robot Operating System (ROS). Through this project, I explored the creation and configuration of custom robots, along with performing a pick-and-place task using the MoveIt plugin.
 
 ## Features
-- Installed ROS Noetic and learning creating packages
+- Installed ROS Noetic and learned creating packages
 - Created a custom robot model
 - Implemented a pick-and-place task
 - Configured a Universal Robot
