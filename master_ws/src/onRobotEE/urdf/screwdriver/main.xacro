@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+
+<robot name="robotiq_85_gripper" xmlns:xacro="http://ros.org/wiki/xacro">
+    
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"> 
+            <!--robotNamespace>/</robotNamespace-->
+        </plugin> 
+    </gazebo>
+    
+    <link name="world"/>
+
+    <link name="gripper_root_link">
+        <visual>
+            <origin xyz="0 0 0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.1 0.1 1.0"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.1 0.1 1.0"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="1e2" />
+            <origin xyz="0.0 0.0 0.0" />
+            <inertia ixx = "0.000001" ixy = "0.000000" ixz = "0.000000"
+                     iyx = "0.000000" iyy = "0.000001" iyz = "0.000000"
+                     izx = "0.000000" izy = "0.000000" izz = "0.000001" />
+        </inertial>
+    </link>
+
+    <link name="link0">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://onRobotEE/urdf/screwdriver/visual/body.dae"/>
+            </geometry>
+            <material name="Mat">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material> 
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://onRobotEE/urdf/screwdriver/collision/body.stl"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="4.0"/>
+            <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+            <inertia ixx="0.00443333156" ixy="0.0" ixz="0.0" iyy="0.00443333156" iyz="0.0" izz="0.0072"/>
+        </inertial>
+    </link>
+
+    <link name="link1">
+        <visual>
+            <origin xyz="0.0 -0.0915 -0.13" rpy="0.0 0.0 0.0"/> <!-- was 0.165 to have screw bit at start of hole-->
+            <geometry>
+                <mesh filename="package://onRobotEE/urdf/screwdriver/visual/shank_bit.dae"/>
+            </geometry>
+            <material name="Mat">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <joint name="world_fixed" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="gripper_root_link"/>
+    </joint>
+
+    <joint name="root_joint" type="fixed">
+        <origin xyz="0.05 0 0.8" rpy="0 0 1.57"/>
+        <parent link="gripper_root_link"/>
+        <child link="link0"/>
+    </joint>
+
+    <joint name="joint0" type="prismatic">
+        <parent link="link0"/>
+        <child link="link1"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.0 0.0"/>
+        <axis xyz="0 0 -1"/>
+        <limit effort="150.0" lower="0.0" upper="0.055" velocity="1.5"/> <!--screw limit: 0.020 m-->
+    </joint>
+    
+</robot>

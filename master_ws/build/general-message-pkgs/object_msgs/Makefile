@@ -56,18 +56,6 @@ CMAKE_BINARY_DIR = /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -92,27 +80,15 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target test
 test:
@@ -125,15 +101,39 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
-.PHONY : list_install_components/fast
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,229 +168,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/rule
+general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/rule
 
 # Convenience name for target.
-_object_msgs_generate_messages_check_deps_Object: general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/rule
+object_msgs_genpy: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/rule
 
-.PHONY : _object_msgs_generate_messages_check_deps_Object
+.PHONY : object_msgs_genpy
 
 # fast build rule for target.
-_object_msgs_generate_messages_check_deps_Object/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/build
-.PHONY : _object_msgs_generate_messages_check_deps_Object/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-object_recognition_msgs_generate_messages_py: general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
-
-.PHONY : object_recognition_msgs_generate_messages_py
-
-# fast build rule for target.
-object_recognition_msgs_generate_messages_py/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build
-.PHONY : object_recognition_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-shape_msgs_generate_messages_nodejs: general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : shape_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-shape_msgs_generate_messages_nodejs/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build
-.PHONY : shape_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-object_recognition_msgs_generate_messages_lisp: general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : object_recognition_msgs_generate_messages_lisp
-
-# fast build rule for target.
-object_recognition_msgs_generate_messages_lisp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build
-.PHONY : object_recognition_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/rule
-
-# Convenience name for target.
-object_msgs_geneus: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/rule
-
-.PHONY : object_msgs_geneus
-
-# fast build rule for target.
-object_msgs_geneus/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/build
-.PHONY : object_msgs_geneus/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-object_recognition_msgs_generate_messages_eus: general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
-
-.PHONY : object_recognition_msgs_generate_messages_eus
-
-# fast build rule for target.
-object_recognition_msgs_generate_messages_eus/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build
-.PHONY : object_recognition_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/rule
-
-# Convenience name for target.
-_object_msgs_generate_messages_check_deps_RegisterObject: general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/rule
-
-.PHONY : _object_msgs_generate_messages_check_deps_RegisterObject
-
-# fast build rule for target.
-_object_msgs_generate_messages_check_deps_RegisterObject/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/build
-.PHONY : _object_msgs_generate_messages_check_deps_RegisterObject/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-object_recognition_msgs_generate_messages_cpp: general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : object_recognition_msgs_generate_messages_cpp
-
-# fast build rule for target.
-object_recognition_msgs_generate_messages_cpp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build
-.PHONY : object_recognition_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-object_msgs_generate_messages_nodejs: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : object_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-object_msgs_generate_messages_nodejs/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/build
-.PHONY : object_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-shape_msgs_generate_messages_lisp: general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : shape_msgs_generate_messages_lisp
-
-# fast build rule for target.
-shape_msgs_generate_messages_lisp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build
-.PHONY : shape_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/rule
-
-# Convenience name for target.
-_object_msgs_generate_messages_check_deps_ObjectInfo: general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/rule
-
-.PHONY : _object_msgs_generate_messages_check_deps_ObjectInfo
-
-# fast build rule for target.
-_object_msgs_generate_messages_check_deps_ObjectInfo/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/build
-.PHONY : _object_msgs_generate_messages_check_deps_ObjectInfo/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-shape_msgs_generate_messages_eus: general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
-
-.PHONY : shape_msgs_generate_messages_eus
-
-# fast build rule for target.
-shape_msgs_generate_messages_eus/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_eus.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_eus.dir/build
-.PHONY : shape_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/rule
-
-# Convenience name for target.
-_object_msgs_generate_messages_check_deps_ObjectPose: general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/rule
-
-.PHONY : _object_msgs_generate_messages_check_deps_ObjectPose
-
-# fast build rule for target.
-_object_msgs_generate_messages_check_deps_ObjectPose/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/build
-.PHONY : _object_msgs_generate_messages_check_deps_ObjectPose/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-object_recognition_msgs_generate_messages_nodejs: general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : object_recognition_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-object_recognition_msgs_generate_messages_nodejs/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build
-.PHONY : object_recognition_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/rule
-
-# Convenience name for target.
-object_msgs_gencpp: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/rule
-
-.PHONY : object_msgs_gencpp
-
-# fast build rule for target.
-object_msgs_gencpp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/build
-.PHONY : object_msgs_gencpp/fast
+object_msgs_genpy/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/build
+.PHONY : object_msgs_genpy/fast
 
 # Convenience name for target.
 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages.dir/rule:
@@ -408,94 +198,19 @@ object_msgs_generate_messages/fast:
 .PHONY : object_msgs_generate_messages/fast
 
 # Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
+general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/rule
 
 # Convenience name for target.
-shape_msgs_generate_messages_cpp: general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
+_object_msgs_generate_messages_check_deps_Object: general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/rule
 
-.PHONY : shape_msgs_generate_messages_cpp
+.PHONY : _object_msgs_generate_messages_check_deps_Object
 
 # fast build rule for target.
-shape_msgs_generate_messages_cpp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build
-.PHONY : shape_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-object_msgs_generate_messages_eus: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/rule
-
-.PHONY : object_msgs_generate_messages_eus
-
-# fast build rule for target.
-object_msgs_generate_messages_eus/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/build
-.PHONY : object_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_py.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-shape_msgs_generate_messages_py: general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
-
-.PHONY : shape_msgs_generate_messages_py
-
-# fast build rule for target.
-shape_msgs_generate_messages_py/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_py.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/shape_msgs_generate_messages_py.dir/build
-.PHONY : shape_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-object_msgs_generate_messages_lisp: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : object_msgs_generate_messages_lisp
-
-# fast build rule for target.
-object_msgs_generate_messages_lisp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/build
-.PHONY : object_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/rule
-
-# Convenience name for target.
-object_msgs_gennodejs: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/rule
-
-.PHONY : object_msgs_gennodejs
-
-# fast build rule for target.
-object_msgs_gennodejs/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/build
-.PHONY : object_msgs_gennodejs/fast
-
-# Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/rule
-
-# Convenience name for target.
-object_msgs_genlisp: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/rule
-
-.PHONY : object_msgs_genlisp
-
-# fast build rule for target.
-object_msgs_genlisp/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/build
-.PHONY : object_msgs_genlisp/fast
+_object_msgs_generate_messages_check_deps_Object/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_Object.dir/build
+.PHONY : _object_msgs_generate_messages_check_deps_Object/fast
 
 # Convenience name for target.
 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_cpp.dir/rule:
@@ -513,19 +228,94 @@ object_msgs_generate_messages_cpp/fast:
 .PHONY : object_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/rule:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/rule
-.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/rule
+general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/rule
 
 # Convenience name for target.
-object_msgs_genpy: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/rule
+_object_msgs_generate_messages_check_deps_ObjectInfo: general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/rule
 
-.PHONY : object_msgs_genpy
+.PHONY : _object_msgs_generate_messages_check_deps_ObjectInfo
 
 # fast build rule for target.
-object_msgs_genpy/fast:
-	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genpy.dir/build
-.PHONY : object_msgs_genpy/fast
+_object_msgs_generate_messages_check_deps_ObjectInfo/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectInfo.dir/build
+.PHONY : _object_msgs_generate_messages_check_deps_ObjectInfo/fast
+
+# Convenience name for target.
+general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/rule
+
+# Convenience name for target.
+object_msgs_geneus: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/rule
+
+.PHONY : object_msgs_geneus
+
+# fast build rule for target.
+object_msgs_geneus/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_geneus.dir/build
+.PHONY : object_msgs_geneus/fast
+
+# Convenience name for target.
+general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/rule
+
+# Convenience name for target.
+_object_msgs_generate_messages_check_deps_RegisterObject: general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/rule
+
+.PHONY : _object_msgs_generate_messages_check_deps_RegisterObject
+
+# fast build rule for target.
+_object_msgs_generate_messages_check_deps_RegisterObject/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_RegisterObject.dir/build
+.PHONY : _object_msgs_generate_messages_check_deps_RegisterObject/fast
+
+# Convenience name for target.
+general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/rule
+
+# Convenience name for target.
+_object_msgs_generate_messages_check_deps_ObjectPose: general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/rule
+
+.PHONY : _object_msgs_generate_messages_check_deps_ObjectPose
+
+# fast build rule for target.
+_object_msgs_generate_messages_check_deps_ObjectPose/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/_object_msgs_generate_messages_check_deps_ObjectPose.dir/build
+.PHONY : _object_msgs_generate_messages_check_deps_ObjectPose/fast
+
+# Convenience name for target.
+general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/rule
+
+# Convenience name for target.
+object_msgs_gencpp: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/rule
+
+.PHONY : object_msgs_gencpp
+
+# fast build rule for target.
+object_msgs_gencpp/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gencpp.dir/build
+.PHONY : object_msgs_gencpp/fast
+
+# Convenience name for target.
+general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+object_msgs_generate_messages_eus: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/rule
+
+.PHONY : object_msgs_generate_messages_eus
+
+# fast build rule for target.
+object_msgs_generate_messages_eus/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_eus.dir/build
+.PHONY : object_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_py.dir/rule:
@@ -542,44 +332,94 @@ object_msgs_generate_messages_py/fast:
 	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_py.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_py.dir/build
 .PHONY : object_msgs_generate_messages_py/fast
 
+# Convenience name for target.
+general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/rule
+
+# Convenience name for target.
+object_msgs_gennodejs: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/rule
+
+.PHONY : object_msgs_gennodejs
+
+# fast build rule for target.
+object_msgs_gennodejs/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_gennodejs.dir/build
+.PHONY : object_msgs_gennodejs/fast
+
+# Convenience name for target.
+general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+object_msgs_generate_messages_lisp: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : object_msgs_generate_messages_lisp
+
+# fast build rule for target.
+object_msgs_generate_messages_lisp/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_lisp.dir/build
+.PHONY : object_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/rule
+
+# Convenience name for target.
+object_msgs_genlisp: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/rule
+
+.PHONY : object_msgs_genlisp
+
+# fast build rule for target.
+object_msgs_genlisp/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_genlisp.dir/build
+.PHONY : object_msgs_genlisp/fast
+
+# Convenience name for target.
+general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/rule:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f CMakeFiles/Makefile2 general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/rule
+.PHONY : general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+object_msgs_generate_messages_nodejs: general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : object_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+object_msgs_generate_messages_nodejs/fast:
+	cd /mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/build && $(MAKE) -f general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/build.make general-message-pkgs/object_msgs/CMakeFiles/object_msgs_generate_messages_nodejs.dir/build
+.PHONY : object_msgs_generate_messages_nodejs/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... _object_msgs_generate_messages_check_deps_Object"
-	@echo "... object_recognition_msgs_generate_messages_py"
-	@echo "... shape_msgs_generate_messages_nodejs"
-	@echo "... object_recognition_msgs_generate_messages_lisp"
-	@echo "... object_msgs_geneus"
-	@echo "... object_recognition_msgs_generate_messages_eus"
-	@echo "... _object_msgs_generate_messages_check_deps_RegisterObject"
-	@echo "... object_recognition_msgs_generate_messages_cpp"
-	@echo "... object_msgs_generate_messages_nodejs"
-	@echo "... shape_msgs_generate_messages_lisp"
-	@echo "... _object_msgs_generate_messages_check_deps_ObjectInfo"
-	@echo "... shape_msgs_generate_messages_eus"
-	@echo "... _object_msgs_generate_messages_check_deps_ObjectPose"
-	@echo "... object_recognition_msgs_generate_messages_nodejs"
-	@echo "... object_msgs_gencpp"
-	@echo "... object_msgs_generate_messages"
-	@echo "... shape_msgs_generate_messages_cpp"
-	@echo "... object_msgs_generate_messages_eus"
-	@echo "... shape_msgs_generate_messages_py"
-	@echo "... object_msgs_generate_messages_lisp"
-	@echo "... object_msgs_gennodejs"
-	@echo "... object_msgs_genlisp"
-	@echo "... object_msgs_generate_messages_cpp"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
-	@echo "... object_msgs_genpy"
-	@echo "... object_msgs_generate_messages_py"
-	@echo "... test"
 	@echo "... list_install_components"
+	@echo "... test"
+	@echo "... object_msgs_genpy"
+	@echo "... object_msgs_generate_messages"
+	@echo "... install/strip"
+	@echo "... _object_msgs_generate_messages_check_deps_Object"
+	@echo "... object_msgs_generate_messages_cpp"
+	@echo "... _object_msgs_generate_messages_check_deps_ObjectInfo"
+	@echo "... object_msgs_geneus"
+	@echo "... _object_msgs_generate_messages_check_deps_RegisterObject"
+	@echo "... _object_msgs_generate_messages_check_deps_ObjectPose"
+	@echo "... object_msgs_gencpp"
+	@echo "... object_msgs_generate_messages_eus"
+	@echo "... object_msgs_generate_messages_py"
+	@echo "... object_msgs_gennodejs"
+	@echo "... object_msgs_generate_messages_lisp"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... object_msgs_genlisp"
+	@echo "... object_msgs_generate_messages_nodejs"
 .PHONY : help
 
 

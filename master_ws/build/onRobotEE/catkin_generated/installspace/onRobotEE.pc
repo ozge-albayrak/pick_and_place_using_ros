@@ -1,0 +1,8 @@
+prefix=/mnt/c/Users/CUBE-AdminMobile/Documents/ros_course/master_ws/install
+
+Name: onRobotEE
+Description: Description of onRobotEE
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
