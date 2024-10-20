@@ -1,4 +1,4 @@
-# ROS Learning Project
+# Learning ROS for Robotics Programming 
 
 ## Overview
 This project is focused on learning and implementing various concepts in Robot Operating System (ROS). Through this project, I explored the creation and configuration of custom robots, along with performing a pick-and-place task using the MoveIt plugin.
